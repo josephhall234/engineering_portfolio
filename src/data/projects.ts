@@ -1,10 +1,44 @@
 export type ProjectStatus = "Completed" | "In Progress";
 
+export type ProjectImage = {
+  src: string;
+  alt: string;
+  caption?: string;
+};
+
+export type ProjectVideo = {
+  src: string;
+  title: string;
+  caption?: string;
+};
+
+export type ProjectMetric = {
+  label: string;
+  value: string;
+};
+
+export type ProjectSection = {
+  title: string;
+  body: string;
+  images?: ProjectImage[];
+  video?: ProjectVideo;
+  metrics?: ProjectMetric[];
+};
+
 export type Project = {
   title: string;
   slug: string;
   summary: string;
   status: ProjectStatus;
+
+  context?: string;
+  date?: string;
+  team?: string;
+  role?: string;
+  overview?: string;
+
+  heroImage?: ProjectImage;
+  sections?: ProjectSection[];
 };
 
 export type ProjectCategory = {
@@ -48,7 +82,115 @@ export const projectCategories: ProjectCategory[] = [
       { title: "ME 328 Apparatus", slug: "me-328-apparatus", status: "Completed", summary: "A mechanical design apparatus developed through iterative analysis, fabrication, and testing." },
       { title: "Differential Drive Robot", slug: "differential-drive-robot", status: "Completed", summary: "A mobile robot project integrating mechanical design, drivetrain selection, controls, and testing." },
       { title: "Transmission Design Tool", slug: "transmission-design-tool", status: "Completed", summary: "A design tool created to evaluate and compare transmission configurations and performance." },
-      { title: "Model B747 Wing Vibration Study", slug: "b747-wing-vibration-study", status: "Completed", summary: "An experimental and computational study comparing the vibration behavior of a model aircraft wing." },
+      {
+  title: "Model B747 Wing Vibration Study",
+  slug: "b747-wing-vibration-study",
+  status: "Completed",
+
+  context: "ME 318 · Cal Poly",
+  date: "November 2025",
+  team: "Team of Two",
+
+  summary:
+    "Used a spectral analyzer in the lab to compare analytical, simulated, and experimental results for the first natural frequency of the model Boeing 747 aircraft wing.",
+
+  overview:
+    "This project compared three methods of predicting a model B747 wing’s first natural frequency: analytical hand calculations, SolidWorks modal analysis, and experimental testing.",
+
+  role:
+    "Completed the analytical hand calculations and performed the vibration analysis in SolidWorks Simulation.",
+
+  heroImage: {
+    src: "/images/projects/Educational/b747_vibratory_study/b747_hero.jpeg",
+    alt: "Model B747 wing used during vibration testing",
+    caption: "Model wing and vibration-test setup.",
+  },
+
+  sections: [
+    {
+      title: "Hand Calculations",
+      body:
+        "Estimated the first natural frequency using analytical vibration methods.",
+      metrics: [
+        {
+          label: "Theoretical natural frequency",
+          value: "39.9 Hz",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Educational/b747_vibratory_study/b747_hand_calcs.JPG",
+          alt: "Hand calculations for the model B747 wing’s first natural frequency",
+          caption: "Analytical estimate of the first natural frequency.",
+        },
+      ],
+    },
+    {
+      title: "SolidWorks Simulation",
+      body:
+        "Built the modal analysis, generated the finite element mesh, and evaluated the first vibration mode.",
+      metrics: [
+        {
+          label: "Simulated natural frequency",
+          value: "32.2 Hz",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Educational/b747_vibratory_study/b747_mesh.jpeg",
+          alt: "Finite element mesh used for the model B747 wing",
+          caption: "Finite element mesh used in the modal study.",
+        },
+        {
+          src: "/images/projects/Educational/b747_vibratory_study/b747_fea.PNG",
+          alt: "SolidWorks modal-analysis result for the model B747 wing",
+          caption: "Simulated first vibration mode.",
+        },
+      ],
+    },
+    {
+      title: "Experimental Testing",
+      body:
+        "Excited the wing using a shake table and measured its response with accelerometers and a spectral analyzer.",
+      metrics: [
+        {
+          label: "Measured natural frequency",
+          value: "33.8 Hz",
+        },
+      ],
+      video: {
+        src: "/images/projects/Educational/b747_vibratory_study/B747_vid.mp4",
+        title: "First natural frequency test",
+        caption:
+          "Slow-motion footage of the wing vibrating near its first natural frequency.",
+      },
+    },
+    {
+      title: "Comparison",
+      body:
+        "The SolidWorks result closely matched the experimental measurement, while the analytical model predicted a higher frequency because of its simplifying assumptions.",
+      metrics: [
+        {
+          label: "Hand calculations",
+          value: "39.9 Hz",
+        },
+        {
+          label: "SolidWorks FEA",
+          value: "32.2 Hz",
+        },
+        {
+          label: "Experimental result",
+          value: "33.8 Hz",
+        },
+      ],
+    },
+    {
+      title: "Reflection",
+      body:
+        "This project strengthened my understanding of structural vibration and reinforced the importance of validating analytical and computational models with experimental data.",
+    },
+  ],
+},
       { title: "Satellite Bracket", slug: "satellite-bracket", status: "Completed", summary: "A structurally optimized bracket evaluated through CAD, hand calculations, FEA, and lifecycle costing." },
     ],
   },
