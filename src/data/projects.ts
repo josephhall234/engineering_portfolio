@@ -79,7 +79,153 @@ export const projectCategories: ProjectCategory[] = [
     description: "Coursework and team projects involving design, analysis, experimentation, and collaborative engineering.",
     projects: [
       { title: "Shroud Baseplate", slug: "shroud-baseplate", status: "Completed", summary: "A structural baseplate designed and analyzed for a wind-power shroud prototype." },
-      { title: "ME 328 Apparatus", slug: "me-328-apparatus", status: "Completed", summary: "A mechanical design apparatus developed through iterative analysis, fabrication, and testing." },
+      {
+  title: "Stress/Strain Design Apparatus",
+  slug: "stress-strain-design-apparatus",
+  status: "Completed",
+
+  context: "ME 328 · Cal Poly",
+  date: "December 2025",
+  team: "Team of Three",
+
+  summary:
+    "Worked on a three-person team to design and prototype a photoelastic stress/strain apparatus capable of demonstrating axial, bending, and torsional loading for future mechanics of materials laboratories.",
+
+  overview:
+    "This project focused on designing an educational apparatus capable of visualizing three fundamental loading conditions through photoelasticity. The system was designed to produce a distinct purple stress fringe when viewed through a polariscope, whilst remaining simple to manufacture, assemble, and use in future laboratory courses.",
+
+  role:
+    "Designed the four-point bending subsystem, completed the analytical calculations, developed an Excel design tool to iterate through geometric configurations, and validated the design using finite element analysis.",
+
+  heroImage: {
+    src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_bending.jpeg",
+    alt: "Prototype stress and strain apparatus in the four-point bending configuration",
+    caption:
+      "Full-scale prototype demonstrating the four-point bending configuration.",
+  },
+
+  sections: [
+    {
+      title: "Concept & Design",
+      body:
+        "The apparatus was developed as a teaching tool for future students studying mechanics of materials. Each team member designed one loading configuration, whilst my contribution focused on a four-point bending fixture capable of producing a pure bending moment within the photoelastic specimen.",
+      images: [
+        {
+          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_cad.png",
+          alt: "CAD model of the complete stress and strain apparatus",
+          caption:
+            "Overall CAD model integrating the axial, bending, and torsional loading configurations.",
+        },
+      ],
+    },
+    {
+      title: "Analytical Design",
+      body:
+        "Hand calculations were used to determine the geometry and loading required to generate the target purple photoelastic fringe. Because the required stress was relatively low, the design achieved large safety factors whilst still producing the desired visual effect.",
+      metrics: [
+        {
+          label: "Pure bending moment",
+          value: "15.6 in-lbf",
+        },
+        {
+          label: "Maximum analytical bending stress",
+          value: "444.0 psi",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_handcalcs_1.jpg",
+          alt: "First page of hand calculations for the four-point bending apparatus",
+          caption: "Initial loading and mechanism calculations.",
+        },
+        {
+          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_handcalcs_2.jpg",
+          alt: "Second page of hand calculations for the four-point bending apparatus",
+          caption: "Specimen stress and bending calculations.",
+        },
+        {
+          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_handcalcs_3.jpg",
+          alt: "Third page of hand calculations for the four-point bending apparatus",
+          caption: "Component sizing and strength calculations.",
+        },
+        {
+          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_handcalcs_4.jpg",
+          alt: "Fourth page of hand calculations for the four-point bending apparatus",
+          caption: "Final design and safety-factor calculations.",
+        },
+      ],
+    },
+    {
+      title: "Excel Design Tool",
+      body:
+        "To accelerate the design process, I created an Excel tool that evaluated different geometric configurations automatically. This allowed the mechanism to be refined efficiently before completing the detailed finite element analysis.",
+      images: [
+        {
+          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_excel_tool.png",
+          alt: "Excel design tool used to evaluate geometric configurations",
+          caption:
+            "Excel calculator developed to iterate through geometric configurations.",
+        },
+      ],
+    },
+    {
+      title: "Finite Element Validation",
+      body:
+        "A mesh-convergence study and finite element analysis were completed to validate the analytical calculations. The simulated bending stress closely matched the theoretical prediction, providing confidence in the final design.",
+      metrics: [
+        {
+          label: "Analytical bending stress",
+          value: "444.0 psi",
+        },
+        {
+          label: "Simulated bending stress",
+          value: "421.4 psi",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_fea.png",
+          alt: "Finite element stress result for the four-point bending apparatus",
+          caption:
+            "Finite element results used to validate the analytical bending-stress prediction.",
+        },
+      ],
+    },
+    {
+      title: "Prototype",
+      body:
+        "A full-scale prototype was 3D printed and assembled to demonstrate the three loading configurations during the final class presentation.",
+    },
+    {
+      title: "Design Results",
+      body:
+        "The completed apparatus achieved the target photoelastic stress level whilst maintaining high structural safety factors. The close agreement between the analytical and simulated stresses supported the validity of the design approach.",
+      metrics: [
+        {
+          label: "Target bending moment",
+          value: "15.6 in-lbf",
+        },
+        {
+          label: "Lead-screw torque",
+          value: "0.86 in-lbf",
+        },
+        {
+          label: "ABS safety factor",
+          value: "11.3",
+        },
+        {
+          label: "6061 aluminum safety factor",
+          value: "90",
+        },
+      ],
+    },
+    {
+      title: "Reflection",
+      body:
+        "This project strengthened both my structural design skills and my ability to collaborate within a multidisciplinary team. Coordinating three independently designed loading mechanisms required frequent communication to ensure the final apparatus functioned as a cohesive system. Developing the Excel design tool also reinforced the value of automating repetitive engineering calculations to accelerate design iterations.",
+    },
+  ],
+},
       { title: "Differential Drive Robot", slug: "differential-drive-robot", status: "Completed", summary: "A mobile robot project integrating mechanical design, drivetrain selection, controls, and testing." },
       { title: "Transmission Design Tool", slug: "transmission-design-tool", status: "Completed", summary: "A design tool created to evaluate and compare transmission configurations and performance." },
       {
@@ -128,7 +274,7 @@ export const projectCategories: ProjectCategory[] = [
     {
       title: "SolidWorks Simulation",
       body:
-        "Built the modal analysis, generated the finite element mesh, and evaluated the first vibration mode.",
+        "Built the modal analysis, generated the finite element mesh with a convergence study, and evaluated the first vibration mode.",
       metrics: [
         {
           label: "Simulated natural frequency",
