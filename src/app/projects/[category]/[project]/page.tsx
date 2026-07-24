@@ -200,35 +200,55 @@ export default async function ProjectPage({
                   </div>
                 )}
 
-                {section.images && (
-                  <div
-                    className={`mt-8 grid gap-6 ${
-                      section.images.length > 1
-                        ? "md:grid-cols-2"
-                        : ""
-                    }`}
-                  >
-                    {section.images.map((image) => (
-                      <figure key={image.src}>
-                        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--placeholder)]">
-                          <Image
-                            src={image.src}
-                            alt={image.alt}
-                            fill
-                            sizes="(min-width: 768px) 50vw, 100vw"
-                            className="object-contain"
-                          />
-                        </div>
+ {section.images &&
+  (section.gallery === "handcalcs" ? (
+    <div className="mt-8 grid grid-cols-1 gap-10 xl:grid-cols-2">
+      {section.images.map((image) => (
+        <figure key={image.src}>
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={1600}
+            height={2200}
+            sizes="(min-width: 1280px) 50vw, 100vw"
+            className="h-auto w-full object-contain"
+          />
 
-                        {image.caption && (
-                          <figcaption className="mt-3 text-sm text-[var(--muted)]">
-                            {image.caption}
-                          </figcaption>
-                        )}
-                      </figure>
-                    ))}
-                  </div>
-                )}
+          {image.caption && (
+            <figcaption className="mt-3 text-sm text-[var(--muted)]">
+              {image.caption}
+            </figcaption>
+          )}
+        </figure>
+      ))}
+    </div>
+  ) : (
+    <div
+      className={`mt-8 grid gap-6 ${
+        section.images.length > 1 ? "md:grid-cols-2" : ""
+      }`}
+    >
+      {section.images.map((image) => (
+        <figure key={image.src}>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--placeholder)]">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-contain"
+            />
+          </div>
+
+          {image.caption && (
+            <figcaption className="mt-3 text-sm text-[var(--muted)]">
+              {image.caption}
+            </figcaption>
+          )}
+        </figure>
+      ))}
+    </div>
+  ))}
 
                 {section.video && (
                   <figure className="mt-8">

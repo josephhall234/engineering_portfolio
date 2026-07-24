@@ -23,6 +23,7 @@ export type ProjectSection = {
   images?: ProjectImage[];
   video?: ProjectVideo;
   metrics?: ProjectMetric[];
+  gallery?: "handcalcs";
 };
 
 export type Project = {
@@ -120,6 +121,7 @@ export const projectCategories: ProjectCategory[] = [
     },
     {
       title: "Analytical Design",
+      gallery: "handcalcs",
       body:
         "Hand calculations were used to determine the geometry and loading required to generate the target purple photoelastic fringe. Because the required stress was relatively low, the design achieved large safety factors whilst still producing the desired visual effect.",
       metrics: [
