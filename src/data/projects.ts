@@ -99,11 +99,11 @@ export const projectCategories: ProjectCategory[] = [
     "Designed the four-point bending subsystem, completed the analytical calculations, developed an Excel design tool to iterate through geometric configurations, and validated the design using finite element analysis.",
 
   heroImage: {
-    src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_bending.jpeg",
-    alt: "Prototype stress and strain apparatus in the four-point bending configuration",
-    caption:
-      "Full-scale prototype demonstrating the four-point bending configuration.",
-  },
+  src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_bending.jpeg",
+  alt: "Prototype stress and strain apparatus in the four-point bending configuration",
+  caption:
+    "Full-scale prototype demonstrating the four-point bending configuration.",
+},
 
   sections: [
     {

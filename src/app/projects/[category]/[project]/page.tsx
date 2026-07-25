@@ -5,6 +5,7 @@ import {
   getCategory,
   getProject,
   projectCategories,
+  type ProjectSection,
 } from "@/data/projects";
 
 export function generateStaticParams() {
@@ -171,7 +172,7 @@ export default async function ProjectPage({
               </section>
             )}
 
-            {project.sections?.map((section) => (
+            {project.sections?.map((section: ProjectSection) => (
               <section key={section.title}>
                 <h2 className="text-3xl font-semibold">
                   {section.title}
