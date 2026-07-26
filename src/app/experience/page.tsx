@@ -1,9 +1,18 @@
+type Activity = {
+  title: string;
+  role: string;
+  dates?: string;
+  description: string;
+};
+
 type TimelineEntryProps = {
   dates: string;
   title: string;
   subtitle: string;
   location?: string;
   bullets: string[];
+  activities?: Activity[];
+  plannedNote?: boolean;
   side: "left" | "right";
 };
 
@@ -17,6 +26,31 @@ const education = [
       "Expected graduation: June 2027",
       "Overall GPA: 3.479",
       "Major GPA: 3.396",
+      "Selected Coursework: Energy Conversion, Special Problems for Advanced Undergraduates, Turbomachinery*, Wind Power Engineering*, Ocean Dynamics*",
+    ],
+    plannedNote: true,
+    activities: [
+      {
+        title: "Cal Poly Wind Power",
+        role: "Turbine Design Team",
+        dates: "October 2023–Present",
+        description:
+          "Contribute to the design, analysis, fabrication, and testing of wind-turbine systems as part of a multidisciplinary student team.",
+      },
+      {
+        title: "Mustang Surf Club",
+        role: "Treasurer and Surf Instructor",
+        dates: "2023–Present",
+        description:
+          "Manage club finances, assist with events and trips, and lead surf lessons for students with a range of experience levels.",
+      },
+      {
+        title: "Cal Poly Triathlon Team",
+        role: "Student Athlete",
+        dates: "September 2024–Present",
+        description:
+          "Train and compete alongside other student athletes while balancing a full mechanical engineering course load.",
+      },
     ],
   },
   {
@@ -35,6 +69,7 @@ const education = [
     location: "Berkeley, California",
     bullets: [
       "Participated in student leadership during the 2022–2023 academic year.",
+      "Helped fundraise and coordinate activities for the senior class.",
       "Tutored students in mathematics from 2019 through 2023.",
     ],
   },
@@ -92,34 +127,13 @@ const experience = [
   },
 ];
 
-const certifications = [
-  {
-    title: "Engineer in Training",
-    subtitle: "FE Mechanical",
-  },
-  {
-    title: "American Red Cross",
-    subtitle: "Lifeguarding, First Aid, CPR and AED",
-  },
-  {
-    title: "ANSI-Accredited",
-    subtitle: "Food Handler Certification",
-  },
-];
+const certificationsAndAwards = [
+  "Engineer in Training — FE Mechanical",
+  "American Red Cross Lifeguarding, First Aid, CPR and AED",
+  "ANSI-Accredited Food Handler Certification",
 
-const involvement = [
-  {
-    title: "Treasurer",
-    subtitle: "Mustang Surf Club · December 2024–Present",
-  },
-  {
-    title: "Turbine Design Team",
-    subtitle: "Cal Poly Wind Power · October 2023–Present",
-  },
-  {
-    title: "Student Athlete",
-    subtitle: "Cal Poly Triathlon Team · September 2024–Present",
-  },
+  // Add additional awards here using the same format:
+  // "Award Name — Organization, Year",
 ];
 
 function TimelineEntry({
@@ -128,17 +142,19 @@ function TimelineEntry({
   subtitle,
   location,
   bullets,
+  activities,
+  plannedNote,
   side,
 }: TimelineEntryProps) {
   const dotPosition =
     side === "left"
-      ? "md:-right-[2.4rem]"
-      : "md:-left-[2.4rem]";
+      ? "left-[calc(100%+2rem)] -translate-x-1/2"
+      : "right-[calc(100%+2rem)] translate-x-1/2";
 
   return (
     <article className="relative border-t border-[var(--border)] pt-5">
       <span
-        className={`absolute top-6 hidden h-3 w-3 rounded-full border-2 border-[var(--accent)] bg-[var(--surface)] md:block ${dotPosition}`}
+        className={`absolute top-[1.45rem] z-10 hidden h-4 w-4 rounded-full border-2 border-[var(--accent)] bg-[var(--background)] md:block ${dotPosition}`}
         aria-hidden="true"
       />
 
@@ -159,6 +175,35 @@ function TimelineEntry({
           </li>
         ))}
       </ul>
+
+      {plannedNote && (
+        <p className="mt-2 pl-5 text-sm italic text-[var(--muted)]">
+          *Planned
+        </p>
+      )}
+
+      {activities && activities.length > 0 && (
+        <div className="mt-8 space-y-6 border-t border-[var(--border)] pt-6">
+          <p className="text-sm uppercase tracking-[0.2em] text-[var(--accent)]">
+            Campus Involvement
+          </p>
+
+          {activities.map((activity) => (
+            <div key={activity.title}>
+              <h4 className="text-lg font-semibold">{activity.title}</h4>
+
+              <p className="mt-1 text-sm font-semibold text-[var(--accent)]">
+                {activity.role}
+                {activity.dates && ` · ${activity.dates}`}
+              </p>
+
+              <p className="mt-2 leading-7 text-[var(--muted)]">
+                {activity.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
     </article>
   );
 }
@@ -181,7 +226,7 @@ export default function ExperiencePage() {
 
       <section className="mt-14">
         <div className="grid gap-14 md:grid-cols-[1fr_4rem_1fr] md:gap-0">
-          {/* Education: left side */}
+          {/* Education */}
           <div>
             <h2 className="mb-8 text-3xl font-semibold italic">Education</h2>
 
@@ -197,11 +242,11 @@ export default function ExperiencePage() {
           </div>
 
           {/* Central timeline */}
-          <div className="relative hidden md:block" aria-hidden="true">
-            <div className="absolute bottom-0 left-1/2 top-0 w-px -translate-x-1/2 bg-[var(--border)]" />
+          <div className="relative z-0 hidden md:block" aria-hidden="true">
+            <div className="absolute inset-y-0 left-1/2 z-0 w-px -translate-x-1/2 bg-[var(--border)]" />
           </div>
 
-          {/* Experience: right side */}
+          {/* Experience */}
           <div>
             <h2 className="mb-8 text-3xl font-semibold italic">Experience</h2>
 
@@ -224,44 +269,24 @@ export default function ExperiencePage() {
         </p>
 
         <h2 className="mt-3 text-4xl font-semibold">
-          Certifications &amp; Involvement
+          Certifications &amp; Awards
         </h2>
 
-        <div className="mt-10 grid gap-12 md:grid-cols-2">
-          <div>
-            <h3 className="mb-5 text-sm uppercase tracking-[0.2em] text-[var(--accent)]">
-              Certifications
-            </h3>
+        <ul className="mt-10 max-w-4xl divide-y divide-[var(--border)] border-y border-[var(--border)]">
+          {certificationsAndAwards.map((item) => (
+            <li
+              key={item}
+              className="flex gap-4 py-5 leading-7 text-[var(--muted)]"
+            >
+              <span
+                className="mt-[0.7rem] h-2 w-2 shrink-0 rounded-full bg-[var(--accent)]"
+                aria-hidden="true"
+              />
 
-            <div className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
-              {certifications.map((item) => (
-                <article key={item.title} className="py-5">
-                  <h4 className="text-xl font-semibold">{item.title}</h4>
-                  <p className="mt-1 leading-7 text-[var(--muted)]">
-                    {item.subtitle}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="mb-5 text-sm uppercase tracking-[0.2em] text-[var(--accent)]">
-              Leadership &amp; Involvement
-            </h3>
-
-            <div className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
-              {involvement.map((item) => (
-                <article key={item.title} className="py-5">
-                  <h4 className="text-xl font-semibold">{item.title}</h4>
-                  <p className="mt-1 leading-7 text-[var(--muted)]">
-                    {item.subtitle}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
       </section>
     </main>
   );
