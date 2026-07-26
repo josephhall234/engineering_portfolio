@@ -21,7 +21,7 @@ const interests = [
   },
   {
     title: "Home Brewing",
-    copy: "For many sourdough enthusiasts, the natural next step is home brewing beer. This is still a relatively new hobby for me, and I've only brewed a few batches so far. My two most recent attempts were all-grain versions of an English Pale Ale and a Belgian Witbier. The first turned out great; the second, not so much!",
+    copy: "For many sourdough enthusiasts, the natural next step is home brewing beer. This is still a relatively new hobby for me, and I've only brewed a few batches so far. My two most recent attempts were all-grain versions of an English Pale Ale and a Belgian Witbier. The former turned out great; the latter, not so much!",
     images: [
       "/images/outside-engineering/homebrew_1.jpg",
       "/images/outside-engineering/homebrew_2.JPG",
