@@ -18,9 +18,8 @@ export default function Home() {
           <div className="mt-6 max-w-2xl space-y-5 text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">
             <p>
               I&apos;m Joseph Hall, a mechanical engineering student at Cal
-              Poly SLO with a passion for building things and a curiosity about
-              the natural world. Set to graduate in May 2027, I&apos;m seeking
-              a full-time engineering position beginning in the summer or fall
+              Poly with a natural curiosity and a passion for building things. Set to graduate in May 2027, I&apos;m seeking
+              a full-time engineering position in the summer/fall
               where I can contribute to projects in a meaningful way.
             </p>
 
@@ -28,7 +27,7 @@ export default function Home() {
               Through both academic projects and industry experience,
               I&apos;ve developed a strong foundation in mechanical design,
               engineering analysis, and hands-on testing. Along the way,
-              I&apos;ve grown into an engineer who enjoys tackling difficult
+              I&apos;ve grown into an engineer who works well in a team and enjoys tackling difficult
               problems with equal parts curiosity and persistence.
             </p>
 
