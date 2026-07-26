@@ -68,9 +68,9 @@ const education = [
     subtitle: "High School Diploma",
     location: "Berkeley, California",
     bullets: [
-      "Served as Senior Class Vice President during the 2022-23 academic year for a class of over 900 students.",
-      "Competed at the varsity level on the mens soccer team (4 years) and springboard diving team (3 years).",
-      "Tutored students in mathematics from 2019 through 2023 to support underpriveledged students in the BRIDGE program. .",
+      "Served as Senior Class Vice President during the 2022-23 academic year for a class of over 900 students, helping to fundraise and organize senior-specific events.",
+      "Competed at the varsity level on the mens soccer team (4 years) and springboard diving team (3 years), leading them to multiple league titles and knockout NCS rounds.",
+      "Tutored students in mathematics from 2019 through 2023 to support underpriveledged students in the BRIDGE program.",
     ],
   },
 ];
@@ -132,7 +132,7 @@ const certificationsAndAwards = [
   "1st Place Overall, 2025 Collegiate Wind Competition — CP Wind Power ",
   "2nd Place Turbine Design, 2025 Collegiate Wind Competition — CP Wind Power ",
   "Cal Poly Dean's List — F23,SF24,S26 ",
-  "MTS Olympic Distance Triathlon Finisher, Mens Collegiete Division",
+  "MTS Olympic Distance Triathlon Finisher — Mens Collegiete Division",
 
   // Add additional awards here using the same format:
   // "Award Name — Organization, Year",
