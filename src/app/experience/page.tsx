@@ -20,7 +20,7 @@ const education = [
   {
     dates: "2023–2027",
     title: "California Polytechnic State University",
-    subtitle: "B.S. in Mechanical Engineering",
+    subtitle: "B.S. in Mechanical Engineering, Energy Resources Concentration",
     location: "San Luis Obispo, California",
     bullets: [
       "Expected graduation: June 2027",
@@ -35,31 +35,31 @@ const education = [
         role: "Turbine Design Team",
         dates: "October 2023–Present",
         description:
-          "Contribute to the design, analysis, fabrication, and testing of wind-turbine systems as part of a multidisciplinary student team.",
+          "Contribute to the design, analysis, fabrication, and testing of mechanical components on the small-scale wind turbine as part of the blades subteam.",
       },
       {
         title: "Mustang Surf Club",
         role: "Treasurer and Surf Instructor",
         dates: "2023–Present",
         description:
-          "Manage club finances, assist with events and trips, and lead surf lessons for students with a range of experience levels.",
+          "Create a budget and manage club finances, assist with events and trips, and lead surf lessons for students with a range of experience levels.",
       },
       {
         title: "Cal Poly Triathlon Team",
         role: "Student Athlete",
         dates: "September 2024–Present",
         description:
-          "Train and compete alongside other student athletes while balancing a full mechanical engineering course load.",
+          "Train and compete alongside other student athletes whilst balancing a coursework and other extra-curriculars.",
       },
     ],
   },
   {
     dates: "2022",
     title: "Laney College",
-    subtitle: "Concurrent College Coursework",
+    subtitle: "Dual Enrollment",
     location: "Oakland, California",
     bullets: [
-      "Completed college coursework while attending Berkeley High School.",
+      "Completed Calculus I and II early at the local city college whilst attending Berkeley High School.",
     ],
   },
   {
@@ -68,9 +68,9 @@ const education = [
     subtitle: "High School Diploma",
     location: "Berkeley, California",
     bullets: [
-      "Participated in student leadership during the 2022–2023 academic year.",
-      "Helped fundraise and coordinate activities for the senior class.",
-      "Tutored students in mathematics from 2019 through 2023.",
+      "Served as Senior Class Vice President during the 2022-23 academic year for a class of over 900 students.",
+      "Competed at the varsity level on the mens soccer team (4 years) and springboard diving team (3 years).",
+      "Tutored students in mathematics from 2019 through 2023 to support underpriveledged students in the BRIDGE program. .",
     ],
   },
 ];
@@ -111,8 +111,8 @@ const experience = [
     subtitle: "Lifeguard",
     location: "Oakland, California",
     bullets: [
-      "Monitored the aquatic facility and maintained a safe environment for patrons.",
-      "Taught swim lessons and responded to incidents and injuries.",
+      "Monitored the aquatic facility and maintained a safe environment for nearly 200 patrons.",
+      "Taught swim lessons for summer camps and responded to incidents and injuries.",
     ],
   },
   {
@@ -122,15 +122,17 @@ const experience = [
     location: "Oakland, California",
     bullets: [
       "Managed takeout orders and assisted customers in a fast-paced restaurant environment.",
-      "Coordinated with kitchen staff to prepare and deliver orders accurately.",
+      "Coordinated with kitchen staff to prepare and deliver orders accurately and on time.",
     ],
   },
 ];
 
 const certificationsAndAwards = [
-  "Engineer in Training — FE Mechanical",
-  "American Red Cross Lifeguarding, First Aid, CPR and AED",
-  "ANSI-Accredited Food Handler Certification",
+  "Engineer in Training (FE Mechanical)",
+  "1st Place Overall, 2025 Collegiate Wind Competition — CP Wind Power ",
+  "2nd Place Turbine Design, 2025 Collegiate Wind Competition — CP Wind Power ",
+  "Cal Poly Dean's List — F23,SF24,S26 ",
+  "MTS Olympic Distance Triathlon Finisher, Mens Collegiete Division",
 
   // Add additional awards here using the same format:
   // "Award Name — Organization, Year",
