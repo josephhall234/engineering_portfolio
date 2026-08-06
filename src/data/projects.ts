@@ -23,7 +23,7 @@ export type ProjectSection = {
   images?: ProjectImage[];
   video?: ProjectVideo;
   metrics?: ProjectMetric[];
-  gallery?: "handcalcs";
+  gallery?: "handcalcs" | "featured";
 };
 
 export type Project = {
@@ -121,6 +121,7 @@ export const projectCategories: ProjectCategory[] = [
 
     {
       title: "Attachment Concept",
+      gallery: "featured",
       body:
         "One of the primary design challenges was developing a secure connection without permanently modifying the turbine tower. Because drilling and welding directly into the tower were prohibited, I developed a removable attachment consisting of a retrofitted pipe clamp and a custom-machined aluminum connector. The assembly transferred the shroud loads into the tower whilst allowing the entire system to be installed and removed without altering the existing turbine structure.",
       images: [

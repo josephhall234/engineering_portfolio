@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ProjectImageGallery from "@/components/ProjectImageGallery";
 import {
   getCategory,
   getProject,
@@ -17,6 +18,24 @@ export function generateStaticParams() {
   );
 }
 
+function getVideoType(src: string) {
+  const lowercaseSrc = src.toLowerCase();
+
+  if (lowercaseSrc.endsWith(".mp4")) {
+    return "video/mp4";
+  }
+
+  if (lowercaseSrc.endsWith(".mov")) {
+    return "video/quicktime";
+  }
+
+  if (lowercaseSrc.endsWith(".webm")) {
+    return "video/webm";
+  }
+
+  return undefined;
+}
+
 export default async function ProjectPage({
   params,
 }: {
@@ -25,10 +44,7 @@ export default async function ProjectPage({
     project: string;
   }>;
 }) {
-  const {
-    category: categorySlug,
-    project: projectSlug,
-  } = await params;
+  const { category: categorySlug, project: projectSlug } = await params;
 
   const category = getCategory(categorySlug);
   const project = getProject(categorySlug, projectSlug);
@@ -37,11 +53,7 @@ export default async function ProjectPage({
     notFound();
   }
 
-  const headerDetails = [
-    project.context,
-    project.team,
-    project.date,
-  ]
+  const headerDetails = [project.context, project.team, project.date]
     .filter(Boolean)
     .join(" · ");
 
@@ -150,9 +162,7 @@ export default async function ProjectPage({
           <div className="space-y-16">
             {project.overview && (
               <section>
-                <h2 className="text-3xl font-semibold">
-                  Overview
-                </h2>
+                <h2 className="text-3xl font-semibold">Overview</h2>
 
                 <p className="mt-5 leading-8 text-[var(--muted)]">
                   {project.overview}
@@ -162,9 +172,7 @@ export default async function ProjectPage({
 
             {project.role && (
               <section>
-                <h2 className="text-3xl font-semibold">
-                  My Role
-                </h2>
+                <h2 className="text-3xl font-semibold">My Role</h2>
 
                 <p className="mt-5 leading-8 text-[var(--muted)]">
                   {project.role}
@@ -174,15 +182,13 @@ export default async function ProjectPage({
 
             {project.sections?.map((section: ProjectSection) => (
               <section key={section.title}>
-                <h2 className="text-3xl font-semibold">
-                  {section.title}
-                </h2>
+                <h2 className="text-3xl font-semibold">{section.title}</h2>
 
                 <p className="mt-5 leading-8 text-[var(--muted)]">
                   {section.body}
                 </p>
 
-                {section.metrics && (
+                {section.metrics && section.metrics.length > 0 && (
                   <div className="mt-7 grid gap-4 sm:grid-cols-2">
                     {section.metrics.map((metric) => (
                       <div
@@ -201,55 +207,14 @@ export default async function ProjectPage({
                   </div>
                 )}
 
- {section.images &&
-  (section.gallery === "handcalcs" ? (
-    <div className="mt-8 grid grid-cols-1 gap-10 xl:grid-cols-2">
-      {section.images.map((image) => (
-        <figure key={image.src}>
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width={1600}
-            height={2200}
-            sizes="(min-width: 1280px) 50vw, 100vw"
-            className="h-auto w-full object-contain"
-          />
-
-          {image.caption && (
-            <figcaption className="mt-3 text-sm text-[var(--muted)]">
-              {image.caption}
-            </figcaption>
-          )}
-        </figure>
-      ))}
-    </div>
-  ) : (
-    <div
-      className={`mt-8 grid gap-6 ${
-        section.images.length > 1 ? "md:grid-cols-2" : ""
-      }`}
-    >
-      {section.images.map((image) => (
-        <figure key={image.src}>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--placeholder)]">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-contain"
-            />
-          </div>
-
-          {image.caption && (
-            <figcaption className="mt-3 text-sm text-[var(--muted)]">
-              {image.caption}
-            </figcaption>
-          )}
-        </figure>
-      ))}
-    </div>
-  ))}
+                {section.images && section.images.length > 0 && (
+                  <div className="mt-8">
+                    <ProjectImageGallery
+                      images={section.images}
+                      gallery={section.gallery}
+                    />
+                  </div>
+                )}
 
                 {section.video && (
                   <figure className="mt-8">
@@ -262,7 +227,7 @@ export default async function ProjectPage({
                     >
                       <source
                         src={section.video.src}
-                        type="video/mp4"
+                        type={getVideoType(section.video.src)}
                       />
 
                       Your browser does not support the video element.
