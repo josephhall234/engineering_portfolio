@@ -159,12 +159,12 @@ export default async function ProjectPage({
             </dl>
           </aside>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             {project.overview && (
               <section>
                 <h2 className="text-3xl font-semibold">Overview</h2>
 
-                <p className="mt-5 leading-8 text-[var(--muted)]">
+                <p className="mt-4 leading-8 text-[var(--muted)]">
                   {project.overview}
                 </p>
               </section>

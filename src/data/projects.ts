@@ -89,10 +89,10 @@ export const projectCategories: ProjectCategory[] = [
   team: "Blades Subteam",
 
   summary:
-    "Designed and manufactured the structural baseplate for an aerodynamic wind-turbine shroud, using analytical calculations, a semi-automated design tool, and finite element analysis to verify strength, stiffness, and vibration performance.",
+    "Designed and manufactured the structural baseplate for an aerodynamic wind-turbine shroud, using analytical calculations, a semi-automated design tool, and finite element analysis to verify the calculated strength, stiffness, and resonant frequency.",
 
   overview:
-    "Designed and manufactured a structural baseplate for a small-scale wind turbine to support an approximately 10 lb aerodynamic shroud whilst meeting stiffness, strength, and vibration requirements.",
+    "Designed and manufactured a structural baseplate for a small-scale wind turbine to support an aerodynamic shroud weighing approximately 10 lbs whilst meeting stiffness, strength, and vibration requirements.",
 
   role:
     "Developed the baseplate and removable tower-attachment system, completed the analytical stress and deflection calculations, created a semi-automated sizing tool, produced manufacturing drawings, and validated the final design using static and vibratory finite element analysis.",
@@ -198,19 +198,19 @@ export const projectCategories: ProjectCategory[] = [
         "After selecting the final geometry, I completed a mesh-convergence study to identify an element size that produced stable results whilst minimizing computational complexity. A static finite element analysis was then used to validate the analytical stress and deflection predictions. The geometric constraints and boundary conditions produced a localized stress concentration near the constrained mounting hole. Rather than relying exclusively on the peak contour value at this location, I used the probe tool within the surrounding area of concern to determine a representative maximum stress for comparison with the analytical solution.",
       metrics: [
         {
-          label: "Analytical combined stress",
+          label: "Combined stress (analytical)",
           value: "41.2 MPa",
         },
         {
-          label: "Simulated combined stress",
+          label: "Combined stress (simulated)",
           value: "42.6 MPa",
         },
         {
-          label: "Analytical deflection",
+          label: "Deflection (analytical)",
           value: "3.0 mm",
         },
         {
-          label: "Simulated deflection",
+          label: "Deflection (simulated)",
           value: "5.0 mm",
         },
         {
@@ -300,39 +300,39 @@ export const projectCategories: ProjectCategory[] = [
       body:
         "The final design satisfied the project's structural, stiffness, attachment, and vibration requirements whilst avoiding permanent modification to the turbine tower. The analytical and simulated stress results showed close agreement, and the modal analysis confirmed that the first natural frequency remained safely above the maximum blade frequency. Physical testing further demonstrated that the removable attachment provided sufficient rigidity during operation.",
       metrics: [
-        {
-          label: "Supported shroud weight",
-          value: "Approximately 10 lb",
-        },
-        {
-          label: "Analytical combined stress",
-          value: "41.2 MPa",
-        },
-        {
-          label: "Simulated combined stress",
-          value: "42.6 MPa",
-        },
-        {
-          label: "Analytical deflection",
-          value: "3.0 mm",
-        },
-        {
-          label: "Simulated deflection",
-          value: "5.0 mm",
-        },
-        {
-          label: "Factor of safety",
-          value: "6.7",
-        },
-        {
-          label: "First natural frequency",
-          value: "75.7 Hz",
-        },
-        {
-          label: "Maximum blade frequency",
-          value: "38.3 Hz",
-        },
-      ],
+  {
+    label: "Supported shroud weight",
+    value: "~10 lb",
+  },
+  {
+    label: "Factor of safety",
+    value: "6.7",
+  },
+  {
+    label: "Combined stress (analytical)",
+    value: "41.2 MPa",
+  },
+  {
+    label: "Combined stress (simulated)",
+    value: "42.6 MPa",
+  },
+  {
+    label: "Deflection (analytical)",
+    value: "3.0 mm",
+  },
+  {
+    label: "Deflection (simulated)",
+    value: "5.0 mm",
+  },
+  {
+    label: "Maximum blade frequency",
+    value: "38.3 Hz",
+  },
+  {
+    label: "First natural frequency",
+    value: "75.7 Hz",
+  },
+],
     },
 
     {
@@ -619,7 +619,7 @@ export const projectCategories: ProjectCategory[] = [
 ];
 
 export const featuredProjects = [
-  getProject("educational", "shroud-baseplate"),
+  getProject("educational", "wind-turbine-shroud-baseplate"),
   getProject("personal", "casting-furnace"),
   getProject("professional", "metal-lok-ultra-lite"),
 ].filter((project): project is Project => Boolean(project));
