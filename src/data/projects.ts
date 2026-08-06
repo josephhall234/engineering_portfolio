@@ -79,7 +79,271 @@ export const projectCategories: ProjectCategory[] = [
     slug: "educational",
     description: "Coursework and team projects involving design, analysis, experimentation, and collaborative engineering.",
     projects: [
-      { title: "Shroud Baseplate", slug: "shroud-baseplate", status: "Completed", summary: "A structural baseplate designed and analyzed for a wind-power shroud prototype." },
+      {
+  title: "Wind Turbine Shroud Baseplate",
+  slug: "wind-turbine-shroud-baseplate",
+  status: "Completed",
+
+  context: "Cal Poly Wind Power",
+  date: "February 2025",
+  team: "Blades Subteam",
+
+  summary:
+    "Designed and manufactured the structural baseplate for an aerodynamic wind-turbine shroud, using analytical calculations, a semi-automated design tool, and finite element analysis to verify strength, stiffness, and vibration performance.",
+
+  overview:
+    "Designed and manufactured a structural baseplate for a small-scale wind turbine to support an approximately 10 lb aerodynamic shroud whilst meeting stiffness, strength, and vibration requirements.",
+
+  role:
+    "Developed the baseplate and removable tower-attachment system, completed the analytical stress and deflection calculations, created a semi-automated sizing tool, produced manufacturing drawings, and validated the final design using static and vibratory finite element analysis.",
+
+  heroImage: {
+    src: "/images/projects/Educational/Shroud Baseplate/hero_image.jpeg",
+    alt: "Wind turbine shroud supported by the completed structural baseplate",
+    caption:
+      "Completed aerodynamic shroud and structural baseplate installed on the small-scale wind turbine.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "The shroud was developed as an experimental aerodynamic concept intended to improve the performance of Cal Poly Wind Power's competition turbine. Although the CAD model focuses on the aerodynamic geometry, supporting the approximately 10 lb shroud required a dedicated structural system capable of transferring its weight and operational loads into the existing turbine tower. My responsibility was to design and manufacture the baseplate and attachment hardware whilst satisfying the project's strength, stiffness, and vibration requirements.",
+      images: [
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/cad_assembly.png",
+          alt: "CAD model of the experimental aerodynamic wind turbine shroud",
+          caption:
+            "CAD model of the aerodynamic shroud, illustrating the need for a secure structural attachment between the shroud and turbine tower.",
+        },
+      ],
+    },
+
+    {
+      title: "Attachment Concept",
+      body:
+        "One of the primary design challenges was developing a secure connection without permanently modifying the turbine tower. Because drilling and welding directly into the tower were prohibited, I developed a removable attachment consisting of a retrofitted pipe clamp and a custom-machined aluminum connector. The assembly transferred the shroud loads into the tower whilst allowing the entire system to be installed and removed without altering the existing turbine structure.",
+      images: [
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/shroud_baseplate_hardware_only.jpeg",
+          alt: "Wind turbine shroud baseplate and removable attachment hardware",
+          caption:
+            "Structural baseplate and removable tower-attachment hardware before installation.",
+        },
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/baseplate_close_up.jpeg",
+          alt: "Close-up of the shroud baseplate and pipe-clamp attachment",
+          caption:
+            "Close-up of the completed baseplate, custom connector, and retrofitted pipe-clamp assembly.",
+        },
+      ],
+    },
+
+    {
+      title: "Analytical Design",
+      gallery: "handcalcs",
+      body:
+        "I first developed an analytical model to estimate the combined stresses and maximum deflection produced by the governing load cases. These calculations established the relationships between the applied loading, material properties, plate geometry, required thickness, and factor of safety. The completed analysis provided a baseline for material selection and finite element validation.",
+      metrics: [
+        {
+          label: "Maximum combined stress",
+          value: "41.2 MPa",
+        },
+        {
+          label: "Maximum deflection",
+          value: "3.0 mm",
+        },
+        {
+          label: "Factor of safety",
+          value: "6.7",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/hand_calcs_1.jpg",
+          alt: "First page of wind turbine shroud baseplate hand calculations",
+          caption: "Loading assumptions and free-body analysis.",
+        },
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/hand_calcs_2.jpg",
+          alt: "Second page of wind turbine shroud baseplate hand calculations",
+          caption: "Combined stress and plate-deflection calculations.",
+        },
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/hand_calcs_3.jpg",
+          alt: "Third page of wind turbine shroud baseplate hand calculations",
+          caption: "Thickness selection and factor-of-safety calculations.",
+        },
+      ],
+    },
+
+    {
+      title: "Semi-Automated Design Tool",
+      body:
+        "To accelerate material and geometry selection, I developed a parameter-driven Excel sizing tool that evaluated candidate materials and plate configurations. The tool determined the minimum plate thickness required to exceed a specified factor of safety whilst simultaneously checking the design against the allowable deflection limit. This allowed the team to compare suitable options with the material available in the shop and ultimately reuse aluminum flat plate from another project, reducing both cost and material waste.",
+      images: [
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/excel_tool.png",
+          alt: "Parameter-driven Excel sizing tool for the shroud baseplate",
+          caption:
+            "Semi-automated sizing tool used to compare materials and determine the minimum acceptable baseplate thickness.",
+        },
+      ],
+    },
+
+    {
+      title: "Finite Element Analysis",
+      body:
+        "After selecting the final geometry, I completed a mesh-convergence study to identify an element size that produced stable results whilst minimizing computational complexity. A static finite element analysis was then used to validate the analytical stress and deflection predictions. The geometric constraints and boundary conditions produced a localized stress concentration near the constrained mounting hole. Rather than relying exclusively on the peak contour value at this location, I used the probe tool within the surrounding area of concern to determine a representative maximum stress for comparison with the analytical solution.",
+      metrics: [
+        {
+          label: "Analytical combined stress",
+          value: "41.2 MPa",
+        },
+        {
+          label: "Simulated combined stress",
+          value: "42.6 MPa",
+        },
+        {
+          label: "Analytical deflection",
+          value: "3.0 mm",
+        },
+        {
+          label: "Simulated deflection",
+          value: "5.0 mm",
+        },
+        {
+          label: "Factor of safety",
+          value: "6.7",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/fea_mesh.png",
+          alt: "Finite element mesh used for the shroud baseplate analysis",
+          caption:
+            "Finite element mesh selected following the element-size convergence study.",
+        },
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/fea_stress.png",
+          alt: "Finite element stress result for the wind turbine shroud baseplate",
+          caption:
+            "Simulated combined-stress distribution under the governing load case.",
+        },
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/fea_displacement.png",
+          alt: "Finite element displacement result for the wind turbine shroud baseplate",
+          caption:
+            "Simulated displacement of the baseplate under the governing load case.",
+        },
+      ],
+    },
+
+    {
+      title: "Vibratory Analysis",
+      body:
+        "I also completed a modal analysis to verify that the structure would not resonate with the turbine's operating excitation. Under the worst-case loading configuration, the simulated first natural frequency was 75.7 Hz, remaining well above the blades' maximum operating frequency of 38.3 Hz. This separation provided confidence that the baseplate and shroud assembly would not experience resonant interaction during normal operation.",
+      metrics: [
+        {
+          label: "First natural frequency",
+          value: "75.7 Hz",
+        },
+        {
+          label: "Maximum blade frequency",
+          value: "38.3 Hz",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/fea_frequency.png",
+          alt: "First vibration mode of the wind turbine shroud baseplate",
+          caption:
+            "First simulated vibration mode used to verify separation from the turbine's maximum operating frequency.",
+        },
+      ],
+    },
+
+    {
+      title: "Manufacturing",
+      body:
+        "Following completion of the analytical and computational design, I produced manufacturing drawings for both the structural baseplate and custom attachment bracket. The components were then fabricated, assembled with the selected pipe-clamp hardware, and integrated into the turbine before physical testing.",
+      images: [
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/baseplate_drawing.JPG",
+          alt: "Manufacturing drawing for the wind turbine shroud baseplate",
+          caption: "Manufacturing drawing for the structural baseplate.",
+        },
+        {
+          src: "/images/projects/Educational/Shroud Baseplate/bracket_drawing.JPG",
+          alt: "Manufacturing drawing for the shroud baseplate attachment bracket",
+          caption:
+            "Manufacturing drawing for the custom tower-attachment bracket.",
+        },
+      ],
+    },
+
+    {
+      title: "Physical Testing",
+      body:
+        "The completed assembly was installed on the turbine and evaluated under operating conditions. The baseplate successfully supported the shroud with minimal visible movement at the shroud throat, confirming that the structural attachment performed as intended. Although the shroud produced a marginal improvement in turbine power output, the gains were not sufficient to justify incorporating the concept into the final competition turbine.",
+      video: {
+        src: "/images/projects/Educational/Shroud Baseplate/testing_vid.MOV",
+        caption:
+          "Operational testing of the aerodynamic shroud and structural baseplate.",
+        controls: true,
+        autoPlay: false,
+        muted: false,
+        loop: false,
+      },
+    },
+
+    {
+      title: "Design Results",
+      body:
+        "The final design satisfied the project's structural, stiffness, attachment, and vibration requirements whilst avoiding permanent modification to the turbine tower. The analytical and simulated stress results showed close agreement, and the modal analysis confirmed that the first natural frequency remained safely above the maximum blade frequency. Physical testing further demonstrated that the removable attachment provided sufficient rigidity during operation.",
+      metrics: [
+        {
+          label: "Supported shroud weight",
+          value: "Approximately 10 lb",
+        },
+        {
+          label: "Analytical combined stress",
+          value: "41.2 MPa",
+        },
+        {
+          label: "Simulated combined stress",
+          value: "42.6 MPa",
+        },
+        {
+          label: "Analytical deflection",
+          value: "3.0 mm",
+        },
+        {
+          label: "Simulated deflection",
+          value: "5.0 mm",
+        },
+        {
+          label: "Factor of safety",
+          value: "6.7",
+        },
+        {
+          label: "First natural frequency",
+          value: "75.7 Hz",
+        },
+        {
+          label: "Maximum blade frequency",
+          value: "38.3 Hz",
+        },
+      ],
+    },
+
+    {
+      title: "Reflection",
+      body:
+        "Although the shroud concept was ultimately not incorporated into the final turbine because its aerodynamic gains were insufficient, the baseplate successfully met its structural and functional requirements. The project reinforced the importance of evaluating an engineering concept as a complete system, since a technically successful component does not necessarily make the broader concept worthwhile. It also gave me valuable experience contributing an independently designed subsystem to a large multidisciplinary engineering team working toward a shared competition goal. Cal Poly Wind Power went on to place first overall in the DOE Collegiate Wind Competition and second in Turbine Design.",
+    },
+  ],
+},
       {
   title: "Stress/Strain Design Apparatus",
   slug: "stress-strain-design-apparatus",
