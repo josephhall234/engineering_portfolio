@@ -290,10 +290,6 @@ export const projectCategories: ProjectCategory[] = [
         src: "/images/projects/Educational/Shroud Baseplate/testing_vid.MOV",
         caption:
           "Operational testing of the aerodynamic shroud and structural baseplate.",
-        controls: true,
-        autoPlay: false,
-        muted: false,
-        loop: false,
       },
     },
 
