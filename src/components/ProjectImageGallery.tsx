@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type ProjectImage = {
@@ -10,7 +11,7 @@ type ProjectImage = {
 
 type ProjectImageGalleryProps = {
   images: ProjectImage[];
-  gallery?: string;
+  gallery?: "handcalcs" | "featured";
 };
 
 export default function ProjectImageGallery({
@@ -38,54 +39,102 @@ export default function ProjectImageGallery({
     };
   }, [selectedImage]);
 
-  const gridClass =
-    gallery === "handcalcs"
-      ? "grid grid-cols-1 gap-6 md:grid-cols-3"
-      : gallery === "featured"
-        ? "grid grid-cols-1 gap-8 md:grid-cols-2 lg:-mx-10"
-        : "grid grid-cols-1 gap-6 md:grid-cols-2";
+  const isHandCalculations = gallery === "handcalcs";
+  const isFeatured = gallery === "featured";
+  const isSingleImage = images.length === 1;
 
-  const imageAspectClass =
-    gallery === "handcalcs"
-      ? "aspect-[3/4]"
-      : gallery === "featured"
-        ? "aspect-[5/4]"
-        : "aspect-[4/3]";
+  const gridClass = isHandCalculations
+    ? "grid grid-cols-1 gap-8 md:grid-cols-3"
+    : isFeatured
+      ? "grid grid-cols-1 gap-7 md:grid-cols-2"
+      : isSingleImage
+        ? "grid grid-cols-1"
+        : "grid grid-cols-1 gap-6 md:grid-cols-2";
 
   return (
     <>
       <div className={gridClass}>
-        {images.map((image) => (
-          <figure key={image.src}>
-            <button
-              type="button"
-              onClick={() => setSelectedImage(image)}
-              className={`group relative block w-full overflow-hidden rounded-2xl border border-black/10 bg-neutral-100 ${imageAspectClass}`}
-              aria-label={`Enlarge ${image.alt}`}
+        {images.map((image) => {
+          /*
+           * Hand calculations retain their original page proportions.
+           * Featured photographs fill their containers.
+           * Single technical images use more horizontal space.
+           */
+          if (isHandCalculations) {
+            return (
+              <figure key={image.src}>
+                <button
+                  type="button"
+                  onClick={() => setSelectedImage(image)}
+                  className="group block w-full cursor-zoom-in text-left"
+                  aria-label={`Enlarge ${image.alt}`}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={1600}
+                    height={2200}
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="h-auto w-full transition-opacity group-hover:opacity-90"
+                  />
+                </button>
+
+                {image.caption && (
+                  <figcaption className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                    {image.caption}
+                  </figcaption>
+                )}
+              </figure>
+            );
+          }
+
+          return (
+            <figure
+              key={image.src}
+              className={isSingleImage ? "w-full" : undefined}
             >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-              />
+              <button
+                type="button"
+                onClick={() => setSelectedImage(image)}
+                className={`group relative block w-full cursor-zoom-in overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--placeholder)] ${
+                  isFeatured
+                    ? "aspect-[5/4]"
+                    : isSingleImage
+                      ? "aspect-video"
+                      : "aspect-[4/3]"
+                }`}
+                aria-label={`Enlarge ${image.alt}`}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes={
+                    isSingleImage
+                      ? "(min-width: 768px) 700px, 100vw"
+                      : "(min-width: 768px) 50vw, 100vw"
+                  }
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.015]"
+                />
 
-              <span className="absolute bottom-3 right-3 rounded-full bg-black/65 px-3 py-1.5 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100">
-                View larger
-              </span>
-            </button>
+                <span className="absolute bottom-3 right-3 rounded-full bg-black/65 px-3 py-1.5 text-xs text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                  View larger
+                </span>
+              </button>
 
-            {image.caption && (
-              <figcaption className="mt-3 text-sm leading-relaxed text-neutral-600">
-                {image.caption}
-              </figcaption>
-            )}
-          </figure>
-        ))}
+              {image.caption && (
+                <figcaption className="mt-3 text-sm leading-6 text-[var(--muted)]">
+                  {image.caption}
+                </figcaption>
+              )}
+            </figure>
+          );
+        })}
       </div>
 
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 md:p-8"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 md:p-8"
           role="dialog"
           aria-modal="true"
           aria-label={selectedImage.alt}
@@ -94,19 +143,19 @@ export default function ProjectImageGallery({
           <button
             type="button"
             onClick={() => setSelectedImage(null)}
-            className="absolute right-5 top-5 rounded-full bg-white/15 px-4 py-2 text-sm text-white backdrop-blur transition hover:bg-white/25"
+            className="absolute right-4 top-4 z-10 rounded-full bg-black/60 px-4 py-2 text-sm text-white transition hover:bg-black/80 md:right-6 md:top-6"
           >
             Close
           </button>
 
           <figure
-            className="flex max-h-full max-w-6xl flex-col items-center"
+            className="flex max-h-full max-w-[95vw] flex-col items-center"
             onClick={(event) => event.stopPropagation()}
           >
             <img
               src={selectedImage.src}
               alt={selectedImage.alt}
-              className="max-h-[82vh] max-w-full rounded-xl bg-white object-contain"
+              className="max-h-[88vh] max-w-full object-contain"
             />
 
             {selectedImage.caption && (

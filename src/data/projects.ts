@@ -289,7 +289,7 @@ export const projectCategories: ProjectCategory[] = [
         "The completed assembly was installed on the turbine and evaluated under operating conditions. The baseplate successfully supported the shroud with minimal visible movement at the shroud throat, confirming that the structural attachment performed as intended. Although the shroud produced a marginal improvement in turbine power output, the gains were not sufficient to justify incorporating the concept into the final competition turbine.",
       video: {
         title: "Shroud Baseplate Testing",
-        src: "/images/projects/Educational/Shroud Baseplate/testing_vid.MOV",
+        src: "/images/projects/Educational/Shroud Baseplate/testing_vid.mp4",
         caption:
           "Operational testing of the aerodynamic shroud and structural baseplate.",
       },

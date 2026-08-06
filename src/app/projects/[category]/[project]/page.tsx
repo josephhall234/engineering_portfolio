@@ -116,7 +116,7 @@ export default async function ProjectPage({
           </div>
         )}
 
-        <div className="mt-16 grid gap-12 md:grid-cols-[0.7fr_1.3fr]">
+        <div className="mt-16 grid gap-10 md:grid-cols-[0.55fr_1.45fr]">
           <aside>
             <p className="text-sm uppercase tracking-[0.2em] text-[var(--accent)]">
               Project Details
