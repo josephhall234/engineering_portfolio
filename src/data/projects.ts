@@ -188,6 +188,10 @@ export const projectCategories: ProjectCategory[] = [
           label: "Calculated thermal efficiency*",
           value: "98.4%",
         },
+        {
+          label: "Total Project Cost",
+          value: "$295",
+        },
       ],
     },
 

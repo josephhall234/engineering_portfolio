@@ -44,12 +44,14 @@ export default function ProjectImageGallery({
   const isSingleImage = images.length === 1;
 
   const gridClass = isHandCalculations
-    ? "grid grid-cols-1 gap-8 md:grid-cols-3"
-    : isFeatured
-      ? "grid grid-cols-1 gap-7 md:grid-cols-2"
-      : isSingleImage
-        ? "grid grid-cols-1"
-        : "grid grid-cols-1 gap-6 md:grid-cols-2";
+  ? images.length === 2
+    ? "grid grid-cols-1 gap-8 md:grid-cols-2"
+    : "grid grid-cols-1 gap-8 md:grid-cols-3"
+  : isFeatured
+  ? "grid grid-cols-1 gap-7 md:grid-cols-2"
+  : isSingleImage
+  ? "grid grid-cols-1"
+  : "grid grid-cols-1 gap-6 md:grid-cols-2";
 
   return (
     <>
