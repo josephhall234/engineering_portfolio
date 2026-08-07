@@ -83,20 +83,20 @@ export const projectCategories: ProjectCategory[] = [
     "Redesigned and fabricated a discarded helium canister into a compact propane-fired furnace for metal casting, recycling materials wherever possible and manufacturing custom components to safely sustain temperatures above 2100°F.",
 
   role:
-    "Designed and fabricated the furnace, selected the refractory and insulating materials, manufactured custom components, characterized its operating temperature, and completed heat-transfer calculations to evaluate its thermal performance.",
+    "Designed and fabricated the furnace, selected the refractory and insulating materials, manufactured custom components, tested it's capabilities under careful monitoring, and completed heat-transfer calculations to evaluate its thermal performance.",
 
   heroImage: {
     src: "/images/projects/Personal/Casting Furnace/hero_image.jpeg",
     alt: "Completed propane-fired casting furnace during operation",
     caption:
-      "Completed propane-fired casting furnace during high-temperature operation.",
+      "Completed furnace during the initial fire-up to temper the crucible.",
   },
 
   sections: [
     {
       title: "Project Overview",
       body:
-        "The project began with a discarded helium canister that I wanted to repurpose into a compact furnace for small-scale metal casting. After safely relieving the remaining pressure, I modified the vessel to accommodate the refractory lining, ceramic insulation, burner inlet, and structural hardware. The furnace was designed around a standard propane supply whilst targeting temperatures sufficient for melting common casting alloys.",
+        "The project began with a discarded helium canister that I found on the street and wanted to repurpose into a furnace for small-scale metal casting. After safely relieving the remaining pressure, I modified the vessel to accommodate the refractory lining, ceramic insulation, burner inlet, and structural hardware. The furnace was designed around a standard propane supply whilst targeting temperatures sufficient for melting common aluminum and copper alloys.",
       images: [
         {
           src: "/images/projects/Personal/Casting Furnace/initial_container.jpeg",
@@ -111,7 +111,7 @@ export const projectCategories: ProjectCategory[] = [
       title: "Furnace Construction",
       gallery: "featured",
       body:
-        "The furnace was constructed with a refractory-cement base and approximately two inches of high-temperature ceramic insulation surrounding the combustion chamber. A runoff opening was incorporated into the base to provide a controlled path for escaped molten metal in the event of a crucible failure. I also welded external handles and fabricated the burner interface and gate to direct the propane flame tangentially into the chamber, promoting circulation and more uniform heating. The exterior was finished with a high-temperature ceramic coating.",
+        "The furnace was constructed with a refractory-cement base and approximately two inches of high-temperature ceramic insulation surrounding the combustion chamber. A runoff opening was incorporated into the base to provide a controlled path for molten metal in the event of a crucible failure. I also welded external handles and fabricated the burner interface and gate to direct the propane flame tangentially into the chamber, promoting circulation and more uniform heating. The exterior was finished with a high-temperature ceramic coating.",
       images: [
         {
           src: "/images/projects/Personal/Casting Furnace/in_progress_welding.jpeg",
@@ -123,7 +123,7 @@ export const projectCategories: ProjectCategory[] = [
           src: "/images/projects/Personal/Casting Furnace/lathe_parts.jpeg",
           alt: "Custom-machined components for the casting furnace",
           caption:
-            "Custom components manufactured for the furnace assembly and burner interface.",
+            "Custom components manchined on the lathe for the furnace assembly and burner interface.",
         },
       ],
     },
@@ -132,7 +132,7 @@ export const projectCategories: ProjectCategory[] = [
       title: "Thermal Analysis",
       gallery: "handcalcs",
       body:
-        "During steady-state operation, I measured the exterior surface temperatures using an infrared thermometer and the specified emissivity of the ceramic coating. These measurements were used to estimate conductive, convective, and radiative heat losses through the furnace walls and evaluate its thermal performance. The analytical model intentionally excluded heat transfer through the lid and base, where a substantial portion of the actual heat loss occurs, and estimated burner output without a complete combustion analysis. The resulting calculated thermal efficiency should therefore be interpreted as an idealized upper estimate rather than the furnace's true overall efficiency.",
+        "During steady-state operation, I took many readings of the exterior surface temperatures using an infrared thermometer and the specified emissivity of the ceramic coating. These measurements were used to estimate conductive, convective, and radiative heat losses through the furnace walls and evaluate its thermal performance. The analytical model intentionally excluded heat transfer through the lid and base, where a substantial portion of the actual heat loss occurs, and estimated burner output without a complete combustion analysis. Consequently, the calculated thermal efficiency should be interpreted as an idealized upper limit rather than the furnace's true overall efficiency.",
       metrics: [
         {
           label: "Peak measured temperature",
@@ -199,7 +199,7 @@ export const projectCategories: ProjectCategory[] = [
       title: "Sand Casting Flask",
       gallery: "featured",
       body:
-        "To complement the furnace, I designed a wooden flask consisting of a cope and drag for future sand casting. Because my father is an avid woodworker, I commissioned him to manufacture the flask from my design using scrap wood we already had available. The completed flask will be used with Petrobond sand and 3D-printed patterns to produce cast components with the furnace.",
+        "To complement the furnace, I designed a wooden flask consisting of a cope and drag for future sand casting. Since my father is an avid woodworker, I commissioned him to make the flask from my design using scrap wood he already had available. The completed flask will be used with Petrobond sand and 3D-printed patterns to produce detailed metal castings.",
       images: [
         {
           src: "/images/projects/Personal/Casting Furnace/flask_cad.png",
@@ -211,7 +211,7 @@ export const projectCategories: ProjectCategory[] = [
           src: "/images/projects/Personal/Casting Furnace/flask_photo.jpeg",
           alt: "Completed wooden cope-and-drag flask",
           caption:
-            "Completed wooden flask manufactured from the design using scrap material.",
+            "Completed wooden flask made from the design using scrap material.",
         },
       ],
     },
