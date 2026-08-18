@@ -55,11 +55,226 @@ export const projectCategories: ProjectCategory[] = [
     slug: "professional",
     description: "Engineering work completed in professional manufacturing and product-development environments.",
     projects: [
-      { title: "Metal Lok Ultra Lite", slug: "metal-lok-ultra-lite", status: "Completed", summary: "A connector redesign focused on reducing assembly cost while maintaining demanding pressure, temperature, and safety requirements." },
+      {
+  title: "Metal Lok Ultra Lite",
+  slug: "metal-lok-ultra-lite",
+  status: "In Progress",
+
+  context: "BIW",
+  date: "Summer 2026",
+  team: "Engineering Internship",
+
+  summary:
+    "Redesigned an existing hazardous-environment electrical connector system for 10,000 psi and 350°F service whilst targeting a 39% reduction in manufacturing and assembly cost.",
+
+  overview:
+    "During a 10-week engineering internship at BIW, I worked on the cost-driven redesign of an existing electrical connector system intended for 10,000 psi, 350°F, Class I Division 1 service. The project combined cost modeling, material selection, high-pressure seal design, component redesign, technical documentation, and qualification-test planning.",
+
+  role:
+    "Validated and developed a 45-component cost model, identified redesign opportunities, selected alternative sealing materials, redesigned high-pressure O-ring glands and surrounding components, created supporting calculations and part documentation, and developed formal design and qualification documents including a Design Specification, Qualification Test Plan, and DFMEA.",
+
+  heroImage: {
+    src: "/images/projects/Professional/Metal Lok Ultra Lite/hero_cad_render.png",
+    alt: "CAD rendering of the Metal Lok Ultra Lite electrical connector assembly",
+    caption:
+      "CAD rendering of the redesigned Metal Lok Ultra Lite connector assembly.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "The Metal Lok Ultra Lite project focused on reducing the manufacturing and assembly cost of an existing electrical connector system whilst adapting it to a new set of environmental requirements. Rather than beginning directly with component redesign, I first evaluated whether the concept represented a worthwhile engineering investment by developing a detailed cost model for the existing assembly.",
+      metrics: [
+        {
+          label: "Design pressure",
+          value: "10,000 psi",
+        },
+        {
+          label: "Maximum temperature",
+          value: "350°F",
+        },
+        {
+          label: "Projected cost reduction",
+          value: "~39%",
+        },
+      ],
+    },
+
+    {
+      title: "Cost & Design Analysis",
+      body:
+        "I began by validating and expanding a 45-component cost model for the existing connector assembly. The model established a baseline manufacturing and assembly cost, identified high-impact redesign opportunities, and estimated the savings achievable through the Ultra Lite concept. The completed analysis projected an overall cost reduction of approximately 39%, supporting continued investment in the redesign.",
+      metrics: [
+        {
+          label: "Components evaluated",
+          value: "45",
+        },
+        {
+          label: "Projected cost reduction",
+          value: "39%",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Professional/Metal Lok Ultra Lite/cost_model_blurred.jpg",
+          alt: "Blurred Excel cost model used to evaluate the Metal Lok Ultra Lite connector redesign",
+          caption:
+            "45-component cost model used to evaluate redesign opportunities and estimate overall cost reduction. Proprietary values intentionally obscured.",
+        },
+      ],
+    },
+
+    {
+      title: "Material & Seal Strategy",
+      body:
+        "The revised operating requirements reduced the maximum service temperature from 500°F to 350°F, creating opportunities to replace unnecessarily expensive materials whilst maintaining the required environmental performance. I evaluated alternative sealing materials against the applicable requirements and identified more cost-effective options that remained compliant with the NORSOK M-710 approved-material requirements. At the same time, the maximum design pressure increased from 5,000 psi to 10,000 psi, creating a new sealing challenge that required several glands to incorporate backup rings.",
+      metrics: [
+        {
+          label: "Previous pressure requirement",
+          value: "5,000 psi",
+        },
+        {
+          label: "New pressure requirement",
+          value: "10,000 psi",
+        },
+        {
+          label: "New maximum temperature",
+          value: "350°F",
+        },
+      ],
+    },
+
+    {
+      title: "High-Pressure Seal Redesign",
+      gallery: "featured",
+      body:
+        "I redesigned the affected sealing glands using O-ring calculations based on the selected elastomer, operating temperature, pressure, and gland geometry. The increased pressure requirement introduced a greater risk of seal extrusion, so the revised glands incorporated backup rings and corresponding geometry changes. These calculations established the required gland dimensions before the surrounding components were updated in CAD.",
+      images: [
+        {
+          src: "/images/projects/Professional/Metal Lok Ultra Lite/oring_calcs_before.png",
+          alt: "O-ring gland calculations for the original connector sealing configuration",
+          caption:
+            "Original sealing configuration evaluated before the high-pressure redesign.",
+        },
+        {
+          src: "/images/projects/Professional/Metal Lok Ultra Lite/oring_calcs_after.png",
+          alt: "O-ring gland calculations for the redesigned high-pressure sealing configuration",
+          caption:
+            "Revised gland calculations incorporating the updated pressure, material, and backup-ring requirements.",
+        },
+      ],
+    },
+
+    {
+      title: "Gland Geometry Development",
+      gallery: "featured",
+      body:
+        "The calculated gland requirements were translated into updated component geometry in CAD. Comparing the original and revised configurations allowed the sealing changes to be incorporated without unnecessarily altering the remainder of the connector architecture.",
+      images: [
+        {
+          src: "/images/projects/Professional/Metal Lok Ultra Lite/oring_cad_before.png",
+          alt: "CAD cross section of the original O-ring gland geometry",
+          caption:
+            "Original sealing-gland geometry before the high-pressure redesign.",
+        },
+        {
+          src: "/images/projects/Professional/Metal Lok Ultra Lite/oring_cad_after.png",
+          alt: "CAD cross section of the redesigned O-ring gland and backup-ring geometry",
+          caption:
+            "Revised sealing geometry developed from the updated gland calculations.",
+        },
+      ],
+    },
+
+    {
+      title: "Component Redesign",
+      body:
+        "The revised sealing requirements drove dimensional changes to two components within the connector assembly. I updated the affected geometry around the new gland dimensions, created the associated part documentation, and incorporated the redesigned components into the overall assembly whilst preserving compatibility with the surrounding system.",
+      images: [
+        {
+          src: "/images/projects/Professional/Metal Lok Ultra Lite/lower_connector_cad.png",
+          alt: "CAD model of a redesigned lower connector component",
+          caption:
+            "Updated connector geometry incorporating the revised high-pressure sealing requirements.",
+        },
+      ],
+    },
+
+    {
+      title: "Qualification Planning",
+      body:
+        "Following detailed design, I documented the system requirements in a formal Design Specification and progressed the project through the company's design-review process. I then developed the Qualification Test Plan and DFMEA used to define how the redesigned connector would be evaluated against its mechanical, electrical, pressure, temperature, and sealing requirements. The planned qualification program combined extended-duration pressure and temperature cycling with electrical, mechanical, and post-test inspection requirements.",
+      metrics: [
+        {
+          label: "Design documentation",
+          value: "Design Specification",
+        },
+        {
+          label: "Risk analysis",
+          value: "DFMEA",
+        },
+        {
+          label: "Test documentation",
+          value: "Qualification Test Plan",
+        },
+      ],
+    },
+
+    {
+      title: "Qualification Testing",
+      body:
+        "Qualification began with baseline electrical and mechanical verification, including dielectric, insulation-resistance, continuity, and contact pull testing. Test specimens were then assembled into a DUT string and prepared for environmental exposure within a pressure vessel. The qualification sequence subjected the connector system to repeated pressure and temperature cycling over an extended test duration before requiring repeat electrical testing and detailed inspection for structural, mechanical, or sealing failures.",
+      images: [
+        {
+          src: "/images/projects/Professional/Metal Lok Ultra Lite/test_setup.png",
+          alt: "Qualification test setup for the Metal Lok Ultra Lite connector system",
+          caption:
+            "Connector specimens prepared for environmental qualification testing.",
+        },
+      ],
+    },
+
+    {
+      title: "Technical Documentation & Handoff",
+      body:
+        "Because the company's formal design and qualification process extended beyond my 10-week internship, the project had not reached final qualification before my departure. I documented the design decisions, calculations, test requirements, and remaining work in detail so that another engineer could continue the project without losing design context. This included the Design Specification, Qualification Test Plan, DFMEA, supporting design calculations, and project documentation developed throughout the internship.",
+    },
+
+    {
+      title: "Design Results",
+      body:
+        "The redesign established a technically viable path toward substantially reducing connector cost whilst meeting a new set of environmental requirements. The completed cost model projected approximately 39% savings, while the detailed design incorporated material substitutions, redesigned high-pressure sealing glands, backup rings, and corresponding component changes. The project progressed through detailed design and formal qualification planning before being transferred for continued testing after the conclusion of my internship.",
+      metrics: [
+        {
+          label: "Projected cost reduction",
+          value: "~39%",
+        },
+        {
+          label: "Components evaluated",
+          value: "45",
+        },
+        {
+          label: "Design pressure",
+          value: "10,000 psi",
+        },
+        {
+          label: "Maximum temperature",
+          value: "350°F",
+        },
+      ],
+    },
+
+    {
+      title: "Reflection",
+      body:
+        "This project gave me experience carrying an engineering redesign beyond the component level and considering its technical, economic, and organizational consequences simultaneously. I worked across engineering teams, coordinated with outside suppliers for pricing and lead times, and learned how detailed design, formal review, qualification testing, and technical documentation fit together within a commercial product-development process. Most importantly, the project reinforced that a successful redesign must not only satisfy its engineering requirements, but also provide a compelling business case and be documented well enough to continue beyond any one engineer's involvement.",
+    },
+  ],
+},
       { title: "Injection Mold Plates", slug: "injection-mold-plates", status: "Completed", summary: "Precision mold-plate design developed around customer requirements, machine constraints, and manufacturability." },
       { title: "Custom Semiconductor Vise", slug: "custom-semiconductor-vise", status: "Completed", summary: "A custom precision vise designed to securely and repeatably position semiconductor assemblies during manufacturing." },
       { title: "Pepsi Canning Gear", slug: "pepsi-canning-gear", status: "Completed", summary: "A reverse-engineered replacement gear manufactured for a production canning system." },
-      { title: "AI Chip Test Plate", slug: "ai-chip-test-plate", status: "Completed", summary: "A precision test fixture developed to support repeatable inspection and testing of advanced chip hardware." },
       { title: "Cable Separator", slug: "cable-separator", status: "Completed", summary: "A manufactured component developed to organize and separate cable assemblies within a constrained system." },
     ],
   },
