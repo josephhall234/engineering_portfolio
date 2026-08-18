@@ -992,10 +992,19 @@ export const projectCategories: ProjectCategory[] = [
 ];
 
 export const featuredProjects = [
-  getProject("educational", "wind-turbine-shroud-baseplate"),
-  getProject("personal", "casting-furnace"),
-  getProject("professional", "metal-lok-ultra-lite"),
-].filter((project): project is Project => Boolean(project));
+  {
+    ...getProject("educational", "wind-turbine-shroud-baseplate"),
+    category: "educational",
+  },
+  {
+    ...getProject("personal", "casting-furnace"),
+    category: "personal",
+  },
+  {
+    ...getProject("professional", "metal-lok-ultra-lite"),
+    category: "professional",
+  },
+].filter((project) => Boolean(project));
 
 export function getCategory(categorySlug: string) {
   return projectCategories.find((category) => category.slug === categorySlug);

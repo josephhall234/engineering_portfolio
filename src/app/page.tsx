@@ -92,22 +92,23 @@ export default function Home() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {featuredProjects.map((project) => (
-            <article
-              key={project.slug}
-              className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6"
-            >
-              <p className="text-sm text-[var(--accent)]">{project.status}</p>
+  {featuredProjects.map((project) => (
+    <Link
+      key={project.slug}
+      href={`/projects/${project.category}/${project.slug}`}
+      className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-6"
+    >
+      <p className="text-sm text-[var(--accent)]">{project.status}</p>
 
-              <h3 className="mt-4 text-2xl font-semibold">{project.title}</h3>
+      <h3 className="mt-4 text-2xl font-semibold">{project.title}</h3>
 
-              <p className="mt-4 leading-7 text-[var(--muted)]">
-                {project.summary}
-              </p>
-            </article>
-          ))}
-        </div>
-      </section>
-    </main>
-  );
+      <p className="mt-4 leading-7 text-[var(--muted)]">
+        {project.summary}
+      </p>
+    </Link>
+  ))}
+</div>
+</section>
+</main>
+);
 }
