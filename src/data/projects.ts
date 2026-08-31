@@ -629,16 +629,16 @@ export const projectCategories: ProjectCategory[] = [
     "A wood-burning rocket stove designed and fabricated from $18 of salvaged steel for cooking meals outdoors.",
 
   overview:
-    "Designed, welded, and experimentally evaluated a portable rocket stove using square steel tubing sourced from a local salvage yard. A water-boiling test and published wood-combustion data were used to estimate its heating power, thermal efficiency, and carbon emissions.",
+    "Designed, welded, and experimentally evaluated a (somewhat) portable rocket stove using square steel tubing sourced from a local salvage yard. A water-boiling test and published wood-combustion data were used to estimate its heating power, thermal efficiency, and carbon emissions.",
 
   role:
-    "Developed the stove geometry, selected and prepared the salvaged material, fabricated the assembly through cutting and MIG welding, applied a high-temperature ceramic coating, conducted the water-boiling test, and completed the thermodynamic analysis.",
+    "Developed the stove geometry, selected and prepared the salvaged material, fabricated the assembly through sawing, waterjet cutting, and MIG welding, applied a high-temperature ceramic coating, conducted the water-boiling test, and completed the thermodynamic analysis.",
 
   heroImage: {
     src: "/images/projects/Personal/Rocket Stove/hero_image.jpeg",
     alt: "Completed wood-burning rocket stove during operation",
     caption:
-      "Completed rocket stove burning wood during its initial outdoor testing.",
+      "Completed rocket stove after it's final coat of paint.",
   },
 
   sections: [
@@ -686,7 +686,7 @@ export const projectCategories: ProjectCategory[] = [
     {
       title: "Experimental Testing",
       body:
-        "To evaluate the completed stove, I performed a water-boiling test while measuring the quantity and type of wood consumed. The temperature change and mass of the water were used to estimate the useful heat transferred during the test. Published wood-combustion performance data from William Strauss and FutureMetrics were then used to estimate the energy supplied by the fuel and the associated carbon emissions.",
+        "To evaluate the completed stove, I performed a water-boiling test while measuring the mass quantity and type of wood consumed. The temperature change and mass of the water were used to estimate the useful heat transferred during the test. Published wood-combustion performance data from William Strauss and FutureMetrics were then used to estimate the energy supplied by the fuel and the associated carbon emissions.",
       images: [
         {
           src: "/images/projects/Personal/Rocket Stove/first_firing.jpeg",
@@ -701,7 +701,7 @@ export const projectCategories: ProjectCategory[] = [
       title: "Thermal Analysis",
       gallery: "handcalcs",
       body:
-        "The experimental measurements were combined with published fuel data to estimate the stove's useful heating power, thermal efficiency, and emissions intensity. The analysis produced an estimated output of 278 W and a thermal efficiency of 2.68%. Because the calculation is based on a simplified water-boiling test and reference combustion data rather than direct exhaust or heat-flux measurements, these results should be treated as approximate performance estimates.",
+        "The experimental measurements were combined with published fuel data to estimate the stove's useful heating power, thermal efficiency, and emissions. The analysis produced an estimated output of 278 W and a thermal efficiency of 2.68%. Because the calculation is based on a simplified water-boiling test and reference combustion data rather than direct exhaust or heat-flux measurements, these results should be treated as approximate performance estimates.",
       metrics: [
         {
           label: "Estimated useful power",
@@ -712,7 +712,7 @@ export const projectCategories: ProjectCategory[] = [
           value: "2.68%",
         },
         {
-          label: "Estimated emissions intensity",
+          label: "Estimated emissions",
           value: "0.397 kg CO₂/kWh",
         },
       ],
@@ -721,13 +721,13 @@ export const projectCategories: ProjectCategory[] = [
           src: "/images/projects/Personal/Rocket Stove/hand_calcs_1.jpg",
           alt: "First page of rocket stove thermodynamic calculations",
           caption:
-            "Water-boiling test data and calculations used to estimate the stove's useful power.",
+            "Water-boiling test data and calculations used to estimate the natural gas stovetop in my house.",
         },
         {
           src: "/images/projects/Personal/Rocket Stove/hand_calcs_2.jpg",
           alt: "Second page of rocket stove thermodynamic calculations",
           caption:
-            "Efficiency and emissions calculations based on the measured test data and published wood-combustion properties.",
+            "Efficiency and emissions calculations for the rocket stove based on the measured test data and published wood-combustion properties.",
         },
       ],
     },
@@ -735,7 +735,7 @@ export const projectCategories: ProjectCategory[] = [
     {
       title: "Design Results",
       body:
-        "The completed stove successfully burned small pieces of wood and produced sufficient heat for outdoor cooking. Although its measured performance was modest, it demonstrated that a functional cooking system could be fabricated from inexpensive salvaged material. Its 38-pound weight makes it better suited to car camping than backpacking, but its simple construction and readily available fuel make it enjoyable to use outdoors.",
+        "The completed stove successfully burned small pieces of wood and produced sufficient heat for outdoor cooking. Although its measured performance was modest, it demonstrated that a functional cooking system could be fabricated from inexpensive salvaged material. Its 38-pound weight makes it better suited to car camping than backpacking, but its simple construction and readily available fuel make it really fun to use outdoors.",
       metrics: [
         {
           label: "Salvaged material cost",
@@ -767,13 +767,13 @@ export const projectCategories: ProjectCategory[] = [
     {
       title: "Reflection & Next Steps",
       body:
-        "The stove was neither especially powerful nor efficient, and the analysis suggests that its emissions per unit of useful energy are higher than the reference value for typical natural-gas electricity generation. This comparison provides useful context, although electrical generation and direct cooking heat are not perfectly equivalent systems. Even so, the stove has cooked several memorable outdoor meals and made productive use of material that might otherwise have remained scrap. A future version could reduce weight, improve insulation, and refine the airflow path to promote more complete combustion and better heat transfer to the cookware.",
+        "The stove was neither particularly powerful nor efficient, and the analysis suggests that its emissions per unit of useful energy are higher than the reference value for typical natural-gas power plants. Even so, the stove has cooked several memorable outdoor meals and made productive use of material that might otherwise have remained scrap. A future version could reduce weight and refine the airflow path to promote better heat transfer to the cookware.",
       images: [
         {
           src: "/images/projects/Personal/Rocket Stove/final_image_in_use.JPG",
           alt: "Rocket stove being used to cook a meal while camping",
           caption:
-            "Using the completed rocket stove to cook a meal during a camping trip.",
+            "Using the completed rocket stove to cook a meal during a camping trip near Bend, Oregon.",
         },
       ],
     },
