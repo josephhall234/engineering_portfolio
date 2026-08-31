@@ -779,7 +779,104 @@ export const projectCategories: ProjectCategory[] = [
     },
   ],
 },
-      { title: "Compact Desalination Kit", slug: "compact-desalination-kit", status: "Completed", summary: "A portable concept for converting saltwater into usable freshwater through a compact thermal process." },
+      {
+  title: "Compact Desalination Kit",
+  slug: "compact-desalination-kit",
+  status: "Completed",
+
+  context: "Personal Project",
+  date: "January 2026",
+
+  summary:
+    "A compact thermal desalination device built from copper tubing and a stainless-steel bottle, recovering approximately 55% of its input water as liquid condensate.",
+
+  overview:
+    "Designed and assembled a compact proof-of-concept desalination kit that boils saltwater and routes the resulting vapor through a coiled copper condenser. Testing on a kitchen stove showed that approximately 55% of the initial water mass was recovered as liquid output.",
+
+  role:
+    "Developed the device layout, formed and fitted the copper tubing, modified and sealed the bottle cap, assembled the required fittings, and conducted the initial mass-based recovery test.",
+
+  heroImage: {
+    src: "/images/projects/Personal/Compact Desalination Kit/desalination_setup.jpeg",
+    alt: "Compact desalination kit assembled from a stainless-steel bottle and copper tubing",
+    caption:
+      "Completed compact desalination kit with its stainless-steel boiling vessel and coiled copper condenser.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "This project explored whether a simple thermal desalination device could be made compact enough to store with my camping equipment. The system uses a stainless-steel bottle as the boiling vessel and a length of copper tubing as the vapor path and condenser. When saltwater is heated, water vapor travels through the tubing, cools, and condenses into a separate collection container while the dissolved salts remain in the bottle.",
+    },
+
+    {
+      title: "Construction",
+      body:
+        "The copper tubing was cut to length and carefully wound around the stainless-steel bottle to create a compact condenser. I drilled through the bottle cap, passed the tubing through the opening, and sealed the joint with lead-free solder to limit vapor leakage. Additional fittings were then installed to complete the assembly and provide a controlled outlet for the condensed water.",
+    },
+
+    {
+      title: "Experimental Testing",
+      body:
+        "For initial testing, I heated a measured quantity of water in the bottle using a kitchen stove and collected the liquid discharged from the condenser. Comparing the input and output masses showed that approximately 55% of the starting water was recovered as liquid. The remaining mass was primarily lost as uncollected water vapor through incomplete condensation or leakage from the system.",
+      metrics: [
+        {
+          label: "Liquid-water recovery",
+          value: "~55% by mass",
+        },
+        {
+          label: "Heat source",
+          value: "Kitchen stove",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Personal/Compact Desalination Kit/desalination_testing_setup.jpeg",
+          alt: "Compact desalination kit undergoing testing on a kitchen stove",
+          caption:
+            "Mass-based recovery test performed by boiling water and collecting the condensed output.",
+        },
+      ],
+      video: {
+        title: "Desalination Kit Testing",
+        src: "/images/projects/Personal/Compact Desalination Kit/desalination_testing.mp4",
+        caption:
+          "Testing the compact desalination kit and collecting water from the copper condenser.",
+      },
+    },
+
+    {
+      title: "Design Results",
+      body:
+        "The completed system successfully demonstrated the basic desalination process in a compact, portable assembly. Vapor generated in the stainless-steel bottle traveled through the copper coil and condensed into a separate liquid output. Although the 55% recovery rate leaves considerable room for improvement, the test confirmed that the device can perform its intended proof-of-concept function.",
+      metrics: [
+        {
+          label: "Liquid-water recovery",
+          value: "~55% by mass",
+        },
+        {
+          label: "Boiling vessel",
+          value: "Stainless-steel bottle",
+        },
+        {
+          label: "Condenser",
+          value: "Coiled copper tubing",
+        },
+        {
+          label: "Heat source used during testing",
+          value: "Kitchen stove",
+        },
+      ],
+    },
+
+    {
+      title: "Reflection & Next Steps",
+      body:
+        "This was a straightforward and enjoyable proof of concept that turned a small group of common components into a functioning thermal separation system. I do not anticipate needing it often, but its compact size made it an easy addition to my camping equipment. A future revision could improve the seal at the cap, extend or actively cool the condenser, and better insulate the boiling vessel to increase liquid recovery and reduce energy loss.",
+    },
+  ],
+},
     ],
   },
   {
