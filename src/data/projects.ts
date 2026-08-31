@@ -617,7 +617,168 @@ export const projectCategories: ProjectCategory[] = [
     },
   ],
 },
-      { title: "Rocket Stove", slug: "rocket-stove", status: "Completed", summary: "A compact combustion system exploring efficient heat transfer, airflow, and practical fabrication." },
+      {
+  title: "Rocket Stove",
+  slug: "rocket-stove",
+  status: "Completed",
+
+  context: "Personal Project",
+  date: "April-May 2025",
+
+  summary:
+    "A wood-burning rocket stove designed and fabricated from $18 of salvaged steel for cooking meals outdoors.",
+
+  overview:
+    "Designed, welded, and experimentally evaluated a portable rocket stove using square steel tubing sourced from a local salvage yard. A water-boiling test and published wood-combustion data were used to estimate its heating power, thermal efficiency, and carbon emissions.",
+
+  role:
+    "Developed the stove geometry, selected and prepared the salvaged material, fabricated the assembly through cutting and MIG welding, applied a high-temperature ceramic coating, conducted the water-boiling test, and completed the thermodynamic analysis.",
+
+  heroImage: {
+    src: "/images/projects/Personal/Rocket Stove/hero_image.jpeg",
+    alt: "Completed wood-burning rocket stove during operation",
+    caption:
+      "Completed rocket stove burning wood during its initial outdoor testing.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "The project began after I found suitable square steel tubing at a local salvage yard and decided to repurpose it into a wood-burning stove for camping. The stove was intended to provide a simple alternative to carrying propane while making use of inexpensive reclaimed material. Its geometry directs fuel and airflow into a compact combustion chamber before routing the hot exhaust toward the cooking surface.",
+      images: [
+        {
+          src: "/images/projects/Personal/Rocket Stove/cad_render.png",
+          alt: "CAD model of the wood-burning rocket stove",
+          caption:
+            "CAD model used to establish the stove geometry before fabrication.",
+        },
+      ],
+    },
+
+    {
+      title: "Fabrication",
+      gallery: "featured",
+      body:
+        "The salvaged tubing was cut into the required sections and MIG welded to form the fuel inlet, combustion chamber, chimney, and supporting structure. After fabrication, I cleaned the completed assembly and applied a high-temperature ceramic coating to protect the exterior during repeated use. The finished stove weighs 38 pounds and was constructed using approximately $18 of scrap steel.",
+      images: [
+        {
+          src: "/images/projects/Personal/Rocket Stove/scrap_metal.jpeg",
+          alt: "Salvaged square steel tubing used to build the rocket stove",
+          caption:
+            "Square steel tubing sourced from a local salvage yard for the stove body.",
+        },
+        {
+          src: "/images/projects/Personal/Rocket Stove/welding.jpeg",
+          alt: "Rocket stove during MIG welding and fabrication",
+          caption:
+            "Stove body during cutting, fitting, and MIG welding.",
+        },
+        {
+          src: "/images/projects/Personal/Rocket Stove/completed_unpainted.jpeg",
+          alt: "Completed rocket stove before application of its exterior coating",
+          caption:
+            "Completed welded assembly before application of the high-temperature coating.",
+        },
+      ],
+    },
+
+    {
+      title: "Experimental Testing",
+      body:
+        "To evaluate the completed stove, I performed a water-boiling test while measuring the quantity and type of wood consumed. The temperature change and mass of the water were used to estimate the useful heat transferred during the test. Published wood-combustion performance data from William Strauss and FutureMetrics were then used to estimate the energy supplied by the fuel and the associated carbon emissions.",
+      images: [
+        {
+          src: "/images/projects/Personal/Rocket Stove/first_firing.jpeg",
+          alt: "Rocket stove during its first wood-burning test",
+          caption:
+            "Initial firing used to evaluate combustion and prepare for the water-boiling test.",
+        },
+      ],
+    },
+
+    {
+      title: "Thermal Analysis",
+      gallery: "handcalcs",
+      body:
+        "The experimental measurements were combined with published fuel data to estimate the stove's useful heating power, thermal efficiency, and emissions intensity. The analysis produced an estimated output of 278 W and a thermal efficiency of 2.68%. Because the calculation is based on a simplified water-boiling test and reference combustion data rather than direct exhaust or heat-flux measurements, these results should be treated as approximate performance estimates.",
+      metrics: [
+        {
+          label: "Estimated useful power",
+          value: "278 W",
+        },
+        {
+          label: "Estimated thermal efficiency",
+          value: "2.68%",
+        },
+        {
+          label: "Estimated emissions intensity",
+          value: "0.397 kg CO₂/kWh",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Personal/Rocket Stove/hand_calcs_1.jpg",
+          alt: "First page of rocket stove thermodynamic calculations",
+          caption:
+            "Water-boiling test data and calculations used to estimate the stove's useful power.",
+        },
+        {
+          src: "/images/projects/Personal/Rocket Stove/hand_calcs_2.jpg",
+          alt: "Second page of rocket stove thermodynamic calculations",
+          caption:
+            "Efficiency and emissions calculations based on the measured test data and published wood-combustion properties.",
+        },
+      ],
+    },
+
+    {
+      title: "Design Results",
+      body:
+        "The completed stove successfully burned small pieces of wood and produced sufficient heat for outdoor cooking. Although its measured performance was modest, it demonstrated that a functional cooking system could be fabricated from inexpensive salvaged material. Its 38-pound weight makes it better suited to car camping than backpacking, but its simple construction and readily available fuel make it enjoyable to use outdoors.",
+      metrics: [
+        {
+          label: "Salvaged material cost",
+          value: "$18",
+        },
+        {
+          label: "Completed weight",
+          value: "38 lb",
+        },
+        {
+          label: "Estimated useful power",
+          value: "278 W",
+        },
+        {
+          label: "Estimated thermal efficiency",
+          value: "2.68%",
+        },
+        {
+          label: "Estimated emissions intensity",
+          value: "0.397 kg CO₂/kWh",
+        },
+        {
+          label: "Reference natural-gas generation",
+          value: "0.181 kg CO₂/kWh",
+        },
+      ],
+    },
+
+    {
+      title: "Reflection & Next Steps",
+      body:
+        "The stove was neither especially powerful nor efficient, and the analysis suggests that its emissions per unit of useful energy are higher than the reference value for typical natural-gas electricity generation. This comparison provides useful context, although electrical generation and direct cooking heat are not perfectly equivalent systems. Even so, the stove has cooked several memorable outdoor meals and made productive use of material that might otherwise have remained scrap. A future version could reduce weight, improve insulation, and refine the airflow path to promote more complete combustion and better heat transfer to the cookware.",
+      images: [
+        {
+          src: "/images/projects/Personal/Rocket Stove/final_image_in_use.JPG",
+          alt: "Rocket stove being used to cook a meal while camping",
+          caption:
+            "Using the completed rocket stove to cook a meal during a camping trip.",
+        },
+      ],
+    },
+  ],
+},
       { title: "Compact Desalination Kit", slug: "compact-desalination-kit", status: "Completed", summary: "A portable concept for converting saltwater into usable freshwater through a compact thermal process." },
     ],
   },
