@@ -797,7 +797,7 @@ export const projectCategories: ProjectCategory[] = [
     "Developed the device layout, formed and fitted the copper tubing, modified and sealed the bottle cap, assembled the required fittings, and conducted the initial mass-based recovery test.",
 
   heroImage: {
-    src: "/images/projects/Personal/Compact Desalination Kit/desalination_setup.jpeg",
+    src: "/images/projects/Personal/Compact Desalination Kit/desalination_setup.jpg",
     alt: "Compact desalination kit assembled from a stainless-steel bottle and copper tubing",
     caption:
       "Completed compact desalination kit with its stainless-steel boiling vessel and coiled copper condenser.",
