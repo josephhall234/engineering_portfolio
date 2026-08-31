@@ -442,7 +442,187 @@ export const projectCategories: ProjectCategory[] = [
     },
   ],
 },
-      { title: "Compressed Air Engine", slug: "compressed-air-engine", status: "Completed", summary: "An 11 cc engine designed, machined, assembled, and tested as a complete mechanical system." },
+      {
+  title: "Compressed Air Engine",
+  slug: "compressed-air-engine",
+  status: "Completed",
+
+  context: "Personal Project",
+  date: "June 2024-August 2025",
+
+  summary:
+    "A compressed-air engine designed and manufactured from custom components, then retrofitted with a belt drive to power a pencil sharpener.",
+
+  overview:
+    "Designed and manufactured a compressed-air engine containing 12 custom parts and six moving components. After completing the engine, I added a 3:1 belt reduction to increase its output torque and operate a pencil sharpener.",
+
+  role:
+    "Developed the mechanical concept, modeled the engine and its components in SolidWorks, produced the manufacturing drawings, machined and fabricated 12 custom parts, assembled and tested the complete system, and designed the belt-drive retrofit.",
+
+  heroImage: {
+    src: "/images/projects/Personal/Compressed Air Engine/compressed_air_hero.jpeg",
+    alt: "Completed compressed-air engine with belt-driven pencil sharpener",
+    caption:
+      "Completed compressed-air engine retrofitted with a belt drive to operate a pencil sharpener.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "This project began as an open-ended attempt to design and manufacture a functioning compressed-air engine from the ground up. Starting with a general idea of the desired layout, I developed several revisions in SolidWorks to establish the geometry, component interfaces, and motion before entering the machine shop. The final assembly contains more than 30 parts and converts compressed-air pressure into reciprocating piston motion and continuous rotation at the flywheel.",
+      images: [
+        {
+          src: "/images/projects/Personal/Compressed Air Engine/cad_render.png",
+          alt: "SolidWorks model of the compressed-air engine assembly",
+          caption:
+            "SolidWorks model used to coordinate the engine geometry, component interfaces, and overall assembly.",
+        },
+      ],
+    },
+
+    {
+      title: "Manufacturing & Assembly",
+      body:
+        "Manufacturing the engine required several months of intermittent work and incorporated nearly every process available to me in the machine shop. I designed and manufactured 12 custom components using milling, turning, 3D printing, welding, sawing, and grinding before fitting them into the complete assembly. Producing each component individually made careful dimensional planning essential, since small inaccuracies could accumulate across the crankshaft, piston, connecting rod, bearings, and supporting structure.",
+    },
+
+    {
+      title: "Testing & Design Limitation",
+      body:
+        "The completed engine successfully operated at a supply pressure of 100 psi and reached speeds exceeding 800 rpm. Its primary limitation resulted from the manufacturing sequence used for the cylinder-head interface. I fly-cut the sealing surface before welding the surrounding assembly, and the heat introduced during welding distorted the previously machined face. The resulting air leakage shortens the engine's runtime and demonstrated the importance of completing distortion-producing operations before final machining of critical sealing surfaces.",
+      metrics: [
+        {
+          label: "Maximum measured speed",
+          value: "800+ rpm",
+        },
+        {
+          label: "Operating pressure",
+          value: "100 psi",
+        },
+        {
+          label: "Moving components",
+          value: "6",
+        },
+      ],
+      video: {
+        title: "Compressed-Air Engine Testing",
+        src: "/images/projects/Personal/Compressed Air Engine/testing.mp4",
+        caption:
+          "Testing the completed compressed-air engine and belt-driven pencil-sharpener retrofit.",
+      },
+    },
+
+    {
+      title: "Pencil-Sharpener Retrofit",
+      body:
+        "After the engine was operating successfully, I retrofitted it with a belt-and-pulley system to power a pencil sharpener. The 3:1 reduction decreases the output speed while increasing the available torque, allowing the engine to overcome the sharpener's resistance. Although pressurizing the air reservoir requires far more energy than sharpening a pencil manually, the retrofit provides a playful demonstration of power transmission and mechanical advantage.",
+      metrics: [
+        {
+          label: "Pulley reduction ratio",
+          value: "3:1",
+        },
+        {
+          label: "Custom parts manufactured",
+          value: "12",
+        },
+        {
+          label: "Total assembly parts",
+          value: "30+",
+        },
+      ],
+    },
+
+    {
+      title: "Manufacturing Drawings",
+      gallery: "handcalcs",
+      body:
+        "Before entering the machine shop, I produced detailed drawings for the custom components to define their dimensions, tolerances, and interfaces. These drawings guided the manufacturing process and helped ensure that the independently produced parts would align and move properly when brought together in the final assembly.",
+      images: [
+        {
+          src: "/images/projects/Personal/Compressed Air Engine/drawing_1.jpg",
+          alt: "First manufacturing drawing for the compressed-air engine",
+          caption:
+            "Manufacturing drawing for a custom compressed-air engine component.",
+        },
+        {
+          src: "/images/projects/Personal/Compressed Air Engine/drawing_2.jpg",
+          alt: "Second manufacturing drawing for the compressed-air engine",
+          caption:
+            "Manufacturing drawing for a custom compressed-air engine component.",
+        },
+        {
+          src: "/images/projects/Personal/Compressed Air Engine/drawing_3.jpg",
+          alt: "Third manufacturing drawing for the compressed-air engine",
+          caption:
+            "Manufacturing drawing for a custom compressed-air engine component.",
+        },
+        {
+          src: "/images/projects/Personal/Compressed Air Engine/drawing_4.jpg",
+          alt: "Fourth manufacturing drawing for the compressed-air engine",
+          caption:
+            "Manufacturing drawing for a custom compressed-air engine component.",
+        },
+        {
+          src: "/images/projects/Personal/Compressed Air Engine/drawing_5.jpg",
+          alt: "Fifth manufacturing drawing for the compressed-air engine",
+          caption:
+            "Manufacturing drawing for a custom compressed-air engine component.",
+        },
+        {
+          src: "/images/projects/Personal/Compressed Air Engine/drawing_6.jpg",
+          alt: "Sixth manufacturing drawing for the compressed-air engine",
+          caption:
+            "Manufacturing drawing for a custom compressed-air engine component.",
+        },
+        {
+          src: "/images/projects/Personal/Compressed Air Engine/drawing_7.jpg",
+          alt: "Seventh manufacturing drawing for the compressed-air engine",
+          caption:
+            "Manufacturing drawing for a custom compressed-air engine component.",
+        },
+      ],
+    },
+
+    {
+      title: "Design Results",
+      body:
+        "The completed engine successfully converted compressed air into continuous rotary motion and reached speeds above 800 rpm. Its six moving components operated together within an assembly of more than 30 total parts, including 12 components that I designed and manufactured. The later belt-drive retrofit also provided sufficient torque to operate a pencil sharpener.",
+      metrics: [
+        {
+          label: "Maximum measured speed",
+          value: "800+ rpm",
+        },
+        {
+          label: "Operating pressure",
+          value: "100 psi",
+        },
+        {
+          label: "Pulley reduction ratio",
+          value: "3:1",
+        },
+        {
+          label: "Custom parts manufactured",
+          value: "12",
+        },
+        {
+          label: "Moving components",
+          value: "6",
+        },
+        {
+          label: "Total assembly parts",
+          value: "30+",
+        },
+      ],
+    },
+
+    {
+      title: "Reflection & Next Steps",
+      body:
+        "This project tested nearly every manufacturing process I know how to perform and reinforced the importance of designing around the complete manufacturing sequence, not only the final geometry. Remachining the warped cylinder interface would reduce air leakage and substantially improve the engine's runtime. Despite that limitation, seeing a collection of individually manufactured components operate as a complete engine—and eventually sharpen a pencil—made the extended build process worthwhile.",
+    },
+  ],
+},
       { title: "Rocket Stove", slug: "rocket-stove", status: "Completed", summary: "A compact combustion system exploring efficient heat transfer, airflow, and practical fabrication." },
       { title: "Compact Desalination Kit", slug: "compact-desalination-kit", status: "Completed", summary: "A portable concept for converting saltwater into usable freshwater through a compact thermal process." },
     ],
