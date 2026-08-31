@@ -451,10 +451,10 @@ export const projectCategories: ProjectCategory[] = [
   date: "June 2024-August 2025",
 
   summary:
-    "A compressed-air engine designed and manufactured from custom components, then retrofitted with a belt drive to power a pencil sharpener.",
+    "A compressed-air engine designed and manufactured with custom components, then retrofitted with belts and pulleys to power a pencil sharpener.",
 
   overview:
-    "Designed and manufactured a compressed-air engine containing 12 custom parts and six moving components. After completing the engine, I added a 3:1 belt reduction to increase its output torque and operate a pencil sharpener.",
+    "Designed and manufactured a compressed-air engine containing 12 custom parts designed and machined from scratch. After completing the engine, I added a 3:1 belt reduction to increase its output torque and operate a pencil sharpener.",
 
   role:
     "Developed the mechanical concept, modeled the engine and its components in SolidWorks, produced the manufacturing drawings, machined and fabricated 12 custom parts, assembled and tested the complete system, and designed the belt-drive retrofit.",
@@ -470,13 +470,13 @@ export const projectCategories: ProjectCategory[] = [
     {
       title: "Project Overview",
       body:
-        "This project began as an open-ended attempt to design and manufacture a functioning compressed-air engine from the ground up. Starting with a general idea of the desired layout, I developed several revisions in SolidWorks to establish the geometry, component interfaces, and motion before entering the machine shop. The final assembly contains more than 30 parts and converts compressed-air pressure into reciprocating piston motion and continuous rotation at the flywheel.",
+        "This project began as an open-ended attempt to design and manufacture a functioning compressed-air engine from the ground up. Starting with a general idea of the desired layout, I developed several revisions in SolidWorks to establish the geometry, component interfaces, and motion before entering the machine shop. The final assembly contains more than 30 parts and converts compressed-air into reciprocating piston motion and continuous rotation for a flywheel and driveshaft.",
       images: [
         {
           src: "/images/projects/Personal/Compressed Air Engine/cad_render.png",
           alt: "SolidWorks model of the compressed-air engine assembly",
           caption:
-            "SolidWorks model used to coordinate the engine geometry, component interfaces, and overall assembly.",
+            "SolidWorks assembly used to coordinate the engine geometry, component interfaces, and overall assembly.",
         },
       ],
     },
@@ -484,17 +484,17 @@ export const projectCategories: ProjectCategory[] = [
     {
       title: "Manufacturing & Assembly",
       body:
-        "Manufacturing the engine required several months of intermittent work and incorporated nearly every process available to me in the machine shop. I designed and manufactured 12 custom components using milling, turning, 3D printing, welding, sawing, and grinding before fitting them into the complete assembly. Producing each component individually made careful dimensional planning essential, since small inaccuracies could accumulate across the crankshaft, piston, connecting rod, bearings, and supporting structure.",
+        "Manufacturing the engine required several months of intermittent work and incorporated nearly every process available to me in the machine shop. I designed and manufactured 12 custom components using milling, turning, 3D printing, welding, sawing, grinding, and even woodworking before fitting them into the complete assembly. Producing each component individually made careful dimensional planning essential, since small inaccuracies could accumulate across the crankshaft, piston, connecting rod, bearings, and supporting structure.",
     },
 
     {
       title: "Testing & Design Limitation",
       body:
-        "The completed engine successfully operated at a supply pressure of 100 psi and reached speeds exceeding 800 rpm. Its primary limitation resulted from the manufacturing sequence used for the cylinder-head interface. I fly-cut the sealing surface before welding the surrounding assembly, and the heat introduced during welding distorted the previously machined face. The resulting air leakage shortens the engine's runtime and demonstrated the importance of completing distortion-producing operations before final machining of critical sealing surfaces.",
+        "The completed engine successfully operates at a supply pressure of 100 psi and reaches speeds in excess of 800 rpm. Its primary limitation resulted from the manufacturing sequence used for the cylinder-head interface. I fly-cut the sealing surface before welding the surrounding assembly, and the heat introduced during welding distorted the previously machined face. The resulting air leakage is significant, and it shortens the engine's runtime considerably. This demonstrated the importance of completing distortion-producing operations before final machining of critical surfaces.",
       metrics: [
         {
           label: "Maximum measured speed",
-          value: "800+ rpm",
+          value: "802 rpm",
         },
         {
           label: "Operating pressure",
@@ -509,14 +509,14 @@ export const projectCategories: ProjectCategory[] = [
         title: "Compressed-Air Engine Testing",
         src: "/images/projects/Personal/Compressed Air Engine/testing.mp4",
         caption:
-          "Testing the completed compressed-air engine and belt-driven pencil-sharpener retrofit.",
+          "A short snippet of the inital testing and reduced runtime.",
       },
     },
 
     {
       title: "Pencil-Sharpener Retrofit",
       body:
-        "After the engine was operating successfully, I retrofitted it with a belt-and-pulley system to power a pencil sharpener. The 3:1 reduction decreases the output speed while increasing the available torque, allowing the engine to overcome the sharpener's resistance. Although pressurizing the air reservoir requires far more energy than sharpening a pencil manually, the retrofit provides a playful demonstration of power transmission and mechanical advantage.",
+        "After the engine was operating successfully, I retrofitted it with a belt-and-pulley system to power a pencil sharpener. The 3:1 reduction decreases the output speed whilst increasing the available torque, allowing the engine to overcome the sharpener's resistance. Although pressurizing the air reservoir requires far more energy than sharpening a pencil manually, the retrofit provides a fun demonstration of power transmission and mechanical advantage.",
       metrics: [
         {
           label: "Pulley reduction ratio",
@@ -537,49 +537,43 @@ export const projectCategories: ProjectCategory[] = [
       title: "Manufacturing Drawings",
       gallery: "handcalcs",
       body:
-        "Before entering the machine shop, I produced detailed drawings for the custom components to define their dimensions, tolerances, and interfaces. These drawings guided the manufacturing process and helped ensure that the independently produced parts would align and move properly when brought together in the final assembly.",
+        "Before entering the machine shop, I produced detailed drawings for the custom components to define their dimensions, tolerances, and interfaces. These drawings guided the manufacturing process and helped ensure that the independently produced parts would align and move properly when brought together in the final assembly. These were some of the first engineering drawings I ever made, and it's interesting to look back years later and see how far I've come since then!",
       images: [
         {
           src: "/images/projects/Personal/Compressed Air Engine/drawing_1.jpg",
           alt: "First manufacturing drawing for the compressed-air engine",
           caption:
-            "Manufacturing drawing for a custom compressed-air engine component.",
+            "Barrel end engineering drawing.",
         },
         {
           src: "/images/projects/Personal/Compressed Air Engine/drawing_2.jpg",
           alt: "Second manufacturing drawing for the compressed-air engine",
           caption:
-            "Manufacturing drawing for a custom compressed-air engine component.",
-        },
-        {
-          src: "/images/projects/Personal/Compressed Air Engine/drawing_3.jpg",
-          alt: "Third manufacturing drawing for the compressed-air engine",
-          caption:
-            "Manufacturing drawing for a custom compressed-air engine component.",
+            "Barrel engineering drawing.",
         },
         {
           src: "/images/projects/Personal/Compressed Air Engine/drawing_4.jpg",
           alt: "Fourth manufacturing drawing for the compressed-air engine",
           caption:
-            "Manufacturing drawing for a custom compressed-air engine component.",
+            "Flywheel engineering drawing.",
         },
         {
           src: "/images/projects/Personal/Compressed Air Engine/drawing_5.jpg",
           alt: "Fifth manufacturing drawing for the compressed-air engine",
           caption:
-            "Manufacturing drawing for a custom compressed-air engine component.",
+            "Head support engineering drawing.",
         },
         {
           src: "/images/projects/Personal/Compressed Air Engine/drawing_6.jpg",
           alt: "Sixth manufacturing drawing for the compressed-air engine",
           caption:
-            "Manufacturing drawing for a custom compressed-air engine component.",
+            "Head engineering drawing.",
         },
         {
           src: "/images/projects/Personal/Compressed Air Engine/drawing_7.jpg",
           alt: "Seventh manufacturing drawing for the compressed-air engine",
           caption:
-            "Manufacturing drawing for a custom compressed-air engine component.",
+            "Piston and rod engineering drawing.",
         },
       ],
     },
@@ -619,7 +613,7 @@ export const projectCategories: ProjectCategory[] = [
     {
       title: "Reflection & Next Steps",
       body:
-        "This project tested nearly every manufacturing process I know how to perform and reinforced the importance of designing around the complete manufacturing sequence, not only the final geometry. Remachining the warped cylinder interface would reduce air leakage and substantially improve the engine's runtime. Despite that limitation, seeing a collection of individually manufactured components operate as a complete engine—and eventually sharpen a pencil—made the extended build process worthwhile.",
+        "This project tested nearly every manufacturing process I knew how to perform at the time, and reinforced the importance of designing around the complete manufacturing sequence. Remachining the warped cylinder interface would reduce air leakage and substantially improve the engine's runtime. Despite that limitation, seeing a collection of individually manufactured components operate as a complete engine—and eventually sharpen a pencil—made the extended build process worthwhile.",
     },
   ],
 },
