@@ -807,19 +807,33 @@ export const projectCategories: ProjectCategory[] = [
     {
       title: "Project Overview",
       body:
-        "This project explored whether a simple thermal desalination device could be made compact enough to store with my camping equipment. The system uses a stainless-steel bottle as the boiling vessel and a length of copper tubing as the vapor path and condenser. When saltwater is heated, water vapor travels through the tubing, cools, and condenses into a separate collection container while the dissolved salts remain in the bottle.",
+        "This project explored whether a simple thermal desalination device could be made compact enough to store with my camping equipment. The system uses a stainless-steel bottle as the boiling vessel and a length of copper tubing as the vapor path and condenser. When saltwater is heated, water vapor travels through the tubing, cools, and condenses into a separate collection container whilst the dissolved salts remain in the bottle.",
     },
 
     {
       title: "Construction",
       body:
         "The copper tubing was cut to length and carefully wound around the stainless-steel bottle to create a compact condenser. I drilled through the bottle cap, passed the tubing through the opening, and sealed the joint with lead-free solder to limit vapor leakage. Additional fittings were then installed to complete the assembly and provide a controlled outlet for the condensed water.",
+    images: [
+    {
+      src: "/images/projects/Personal/Compact Desalination Kit/desalination_cap.jpeg",
+      alt: "Modified stainless-steel bottle cap with sealed copper tubing",
+      caption:
+        "Copper tubing passed through the modified bottle cap and sealed with lead-free solder.",
     },
+    {
+      src: "/images/projects/Personal/Compact Desalination Kit/desalination_compact.jpeg",
+      alt: "Compact copper condenser wrapped around the stainless-steel bottle",
+      caption:
+        "Copper tubing wound around the bottle to illustrate the compact assembly.",
+    },
+  ],
+},
 
     {
       title: "Experimental Testing",
       body:
-        "For initial testing, I heated a measured quantity of water in the bottle using a kitchen stove and collected the liquid discharged from the condenser. Comparing the input and output masses showed that approximately 55% of the starting water was recovered as liquid. The remaining mass was primarily lost as uncollected water vapor through incomplete condensation or leakage from the system.",
+        "For initial testing, I heated a measured quantity of water in the bottle using a kitchen stove and collected the liquid discharged from the condenser. Comparing the input and output masses showed that approximately 55% of the starting water was recovered as liquid. The remaining mass was primarily lost as uncollected water vapor through incomplete condensation or leakage from the system. I found that placing a damp cloth around the coils increased the amount of liquid condensed.",
       metrics: [
         {
           label: "Liquid-water recovery",
@@ -849,7 +863,7 @@ export const projectCategories: ProjectCategory[] = [
     {
       title: "Design Results",
       body:
-        "The completed system successfully demonstrated the basic desalination process in a compact, portable assembly. Vapor generated in the stainless-steel bottle traveled through the copper coil and condensed into a separate liquid output. Although the 55% recovery rate leaves considerable room for improvement, the test confirmed that the device can perform its intended proof-of-concept function.",
+        "The completed system successfully demonstrated the basic desalination process in a compact, portable assembly. Vapor generated in the stainless-steel bottle traveled through the copper coil and condensed into a separate liquid output. Although the 55% recovery rate leaves considerable room for improvement, the test confirmed that the device can perform its intended function at a basic level.",
       metrics: [
         {
           label: "Liquid-water recovery",
@@ -873,7 +887,7 @@ export const projectCategories: ProjectCategory[] = [
     {
       title: "Reflection & Next Steps",
       body:
-        "This was a straightforward and enjoyable proof of concept that turned a small group of common components into a functioning thermal separation system. I do not anticipate needing it often, but its compact size made it an easy addition to my camping equipment. A future revision could improve the seal at the cap, extend or actively cool the condenser, and better insulate the boiling vessel to increase liquid recovery and reduce energy loss.",
+        "This was a straightforward and enjoyable project that turned a small group of common components into a functioning thermal separation system. I do not anticipate needing it often, but its compact size made it an easy addition to my camping equipment. A future revision could improve the seal within the elbow connector, extend or actively cool the condenser, and better insulate the boiling vessel to increase liquid recovery and reduce energy loss.",
     },
   ],
 },
