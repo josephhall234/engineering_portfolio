@@ -1180,26 +1180,34 @@ export const projectCategories: ProjectCategory[] = [
     "Designed the four-point bending subsystem, completed the analytical calculations, developed an Excel design tool to iterate through geometric configurations, and validated the design using finite element analysis.",
 
   heroImage: {
-  src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_bending.jpeg",
-  alt: "Prototype stress and strain apparatus in the four-point bending configuration",
-  caption:
-    "Full-scale prototype demonstrating the four-point bending configuration.",
-},
+    src: "/images/projects/Educational/Stress/Strain Apparatus/hero_image.jpeg",
+    alt: "Prototype stress and strain apparatus in the four-point bending configuration",
+    caption:
+      "Full-scale prototype demonstrating the four-point bending configuration.",
+  },
 
   sections: [
     {
       title: "Concept & Design",
+      gallery: "featured",
       body:
         "The apparatus was developed as a teaching tool for future students studying mechanics of materials. Each team member designed one loading configuration, whilst my contribution focused on a four-point bending fixture capable of producing a pure bending moment within the photoelastic specimen.",
       images: [
         {
-          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_cad.png",
+          src: "/images/projects/Educational/Stress/Strain Apparatus/assembly_cad.png",
           alt: "CAD model of the complete stress and strain apparatus",
           caption:
             "Overall CAD model integrating the axial, bending, and torsional loading configurations.",
         },
+        {
+          src: "/images/projects/Educational/Stress/Strain Apparatus/exploded_view_drawing.png",
+          alt: "Exploded assembly drawing of the stress and strain apparatus",
+          caption:
+            "Exploded view illustrating the apparatus components and assembly arrangement.",
+        },
       ],
     },
+
     {
       title: "Analytical Design",
       gallery: "handcalcs",
@@ -1217,40 +1225,42 @@ export const projectCategories: ProjectCategory[] = [
       ],
       images: [
         {
-          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_handcalcs_1.jpg",
+          src: "/images/projects/Educational/Stress/Strain Apparatus/hand_calcs_1.jpg",
           alt: "First page of hand calculations for the four-point bending apparatus",
           caption: "Initial loading and mechanism calculations.",
         },
         {
-          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_handcalcs_2.jpg",
+          src: "/images/projects/Educational/Stress/Strain Apparatus/hand_calcs_2.jpg",
           alt: "Second page of hand calculations for the four-point bending apparatus",
           caption: "Specimen stress and bending calculations.",
         },
         {
-          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_handcalcs_3.jpg",
+          src: "/images/projects/Educational/Stress/Strain Apparatus/hand_calcs_3.jpg",
           alt: "Third page of hand calculations for the four-point bending apparatus",
           caption: "Component sizing and strength calculations.",
         },
         {
-          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_handcalcs_4.jpg",
+          src: "/images/projects/Educational/Stress/Strain Apparatus/hand_calcs_4.jpg",
           alt: "Fourth page of hand calculations for the four-point bending apparatus",
           caption: "Final design and safety-factor calculations.",
         },
       ],
     },
+
     {
       title: "Excel Design Tool",
       body:
         "To accelerate the design process, I created an Excel tool that evaluated different geometric configurations automatically. This allowed the mechanism to be refined efficiently before completing the detailed finite element analysis.",
       images: [
         {
-          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_excel_tool.png",
+          src: "/images/projects/Educational/Stress/Strain Apparatus/excel_tool.png",
           alt: "Excel design tool used to evaluate geometric configurations",
           caption:
             "Excel calculator developed to iterate through geometric configurations.",
         },
       ],
     },
+
     {
       title: "Finite Element Validation",
       body:
@@ -1267,18 +1277,35 @@ export const projectCategories: ProjectCategory[] = [
       ],
       images: [
         {
-          src: "/images/projects/Educational/Stress/Strain Apparatus/stressstrain_apparatus_fea.png",
+          src: "/images/projects/Educational/Stress/Strain Apparatus/bending_fea.png",
           alt: "Finite element stress result for the four-point bending apparatus",
           caption:
             "Finite element results used to validate the analytical bending-stress prediction.",
         },
       ],
     },
+
     {
-      title: "Prototype",
+      title: "Engineering Drawings & Prototype",
+      gallery: "featured",
       body:
         "A full-scale prototype was 3D printed and assembled to demonstrate the three loading configurations during the final class presentation.",
+      images: [
+        {
+          src: "/images/projects/Educational/Stress/Strain Apparatus/engineering_drawing_1.png",
+          alt: "Engineering drawing for the stress and strain apparatus",
+          caption:
+            "Engineering drawing produced to document the apparatus components and dimensions.",
+        },
+        {
+          src: "/images/projects/Educational/Stress/Strain Apparatus/engineering_drawing_2.png",
+          alt: "Second engineering drawing for the stress and strain apparatus",
+          caption:
+            "Additional component and assembly documentation for the final design.",
+        },
+      ],
     },
+
     {
       title: "Design Results",
       body:
@@ -1302,6 +1329,7 @@ export const projectCategories: ProjectCategory[] = [
         },
       ],
     },
+
     {
       title: "Reflection",
       body:
@@ -1507,7 +1535,7 @@ export const projectCategories: ProjectCategory[] = [
           src: "/images/projects/Educational/Transmission Design Tool/figures.png",
           alt: "Transmission design tool calculation figures",
           caption:
-            "Automated calculations and design outputs generated from the customer requirements.",
+            "Graphs and charts from Shigley's, located conveniently within the excel tool for easy access.",
         },
       ],
     },
