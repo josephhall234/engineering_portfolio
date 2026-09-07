@@ -1309,7 +1309,155 @@ export const projectCategories: ProjectCategory[] = [
     },
   ],
 },
-      { title: "Differential Drive Robot", slug: "differential-drive-robot", status: "Completed", summary: "A mobile robot project integrating mechanical design, drivetrain selection, controls, and testing." },
+      {
+  title: "Differential Drive Robot Simulation",
+  slug: "differential-drive-robot-simulation",
+  status: "Completed",
+
+  context: "Cal Poly ME 322",
+  date: "Spring 2026",
+  team: "Individual Project",
+
+  summary:
+    "Developed nonlinear and linearized MATLAB/Simulink models of a Romi differential-drive robot to simulate wheel, chassis, and global-position dynamics under independent motor-voltage inputs.",
+
+  overview:
+    "Developed a nonlinear dynamic model of a Romi differential-drive robot and compared its response against a Jacobian-linearized state-space model across multiple driving conditions.",
+
+  role:
+    "Developed the system hand calculations using linear graph theory, derived and augmented the nonlinear state equations, used MATLAB's Symbolic Math Toolbox to linearize the model, implemented both nonlinear and linear simulations in Simulink, and evaluated their response under four voltage-input cases.",
+
+  heroImage: {
+    src: "/images/projects/Educational/Differential Drive Robot/hero_image.png",
+    alt: "Differential-drive Romi robot simulation",
+    caption:
+      "Nonlinear simulation of a Romi differential-drive robot modeled with coupled motor, wheel, and chassis dynamics.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "This project modeled the dynamic behavior of a two-wheeled Romi robot driven by independent left and right DC gearmotors. The model combined electrical motor dynamics, wheel-ground traction, rigid-body kinematics, and coordinate transformations to predict the robot's motion. A Jacobian-linearized state-space model was developed alongside the full nonlinear model so their responses could be compared across multiple driving conditions.",
+    },
+
+    {
+      title: "System Modeling & Hand Calculations",
+      gallery: "handcalcs",
+      body:
+        "I first developed the transducer relationships, linear graph, normal tree, and nonlinear state equations for the differential-drive system. The hand calculations established how the left and right motors, wheels, and chassis interacted, while the augmented equations added global position and heading states to represent the robot's path.",
+      images: [
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/hand_calcs_1.jpg",
+          alt: "First page of differential-drive robot hand calculations",
+          caption: "Initial system modeling and transducer relationships.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/hand_calcs_2.jpg",
+          alt: "Second page of differential-drive robot hand calculations",
+          caption: "Linear graph development for the differential-drive system.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/hand_calcs_3.jpg",
+          alt: "Third page of differential-drive robot hand calculations",
+          caption: "Normal-tree development and system relationships.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/hand_calcs_4.jpg",
+          alt: "Fourth page of differential-drive robot hand calculations",
+          caption: "Nonlinear state-equation development.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/hand_calcs_5.jpg",
+          alt: "Fifth page of differential-drive robot hand calculations",
+          caption: "Augmented kinematic equations for robot heading and position.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/hand_calcs_6.jpg",
+          alt: "Sixth page of differential-drive robot hand calculations",
+          caption: "Final state equations used for simulation.",
+        },
+      ],
+    },
+
+    {
+      title: "Nonlinear & Linearized Simulation",
+      body:
+        "The nonlinear model was implemented in Simulink using the derived state equations and numerical integration. MATLAB's Symbolic Math Toolbox was then used to determine equilibrium conditions and calculate the Jacobian matrices required for the linear state-space approximation. Both models received identical left- and right-motor voltage inputs, allowing their wheel speeds, chassis motion, and predicted paths to be compared directly.",
+    },
+
+    {
+      title: "Simulation Results",
+      gallery: "featured",
+      body:
+        "Four driving cases were simulated to evaluate straight-line motion, turning, delayed motor actuation, and low-voltage behavior. The results illustrate where the linearized model closely represents the nonlinear system and where the approximation becomes less accurate as the operating condition changes.",
+      images: [
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/case1fig1.jpg",
+          alt: "Case 1 differential-drive robot velocity comparison",
+          caption:
+            "Case 1: Linear and nonlinear response with equal 6 V inputs to both motors.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/case1fig2.jpg",
+          alt: "Case 1 differential-drive robot path comparison",
+          caption:
+            "Case 1: Predicted robot path with equal 6 V inputs to both motors.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/case2fig1.jpg",
+          alt: "Case 2 differential-drive robot velocity comparison",
+          caption:
+            "Case 2: Linear and nonlinear response with 7 V applied to the left motor and 5 V to the right motor.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/case2fig2.jpg",
+          alt: "Case 2 differential-drive robot path comparison",
+          caption:
+            "Case 2: Predicted turning path produced by unequal motor voltages.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/case3fig1.jpg",
+          alt: "Case 3 differential-drive robot velocity comparison",
+          caption:
+            "Case 3: Linear and nonlinear response with a delayed 6 V input to the right motor.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/case3fig2.jpg",
+          alt: "Case 3 differential-drive robot path comparison",
+          caption:
+            "Case 3: Predicted path produced by delayed actuation of the right motor.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/case4fig1.jpg",
+          alt: "Case 4 differential-drive robot velocity comparison",
+          caption:
+            "Case 4: Linear and nonlinear response with equal low-voltage inputs of 1.5 V.",
+        },
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/case4fig2.jpg",
+          alt: "Case 4 differential-drive robot path comparison",
+          caption:
+            "Case 4: Predicted robot path under equal low-voltage inputs.",
+        },
+      ],
+    },
+
+    {
+      title: "Model Comparison",
+      body:
+        "The simulation results demonstrate the strengths and limitations of linearizing a nonlinear system. The linearized model can closely match the nonlinear response near its operating point, while larger changes in motor input or robot motion can produce increasing disagreement. The animation compares the two simulated robots directly and makes this divergence visible in their predicted paths.",
+      images: [
+        {
+          src: "/images/projects/Educational/Differential Drive Robot/combined_animations.gif",
+          alt: "Animated comparison of linear and nonlinear differential-drive robot simulations",
+          caption:
+            "Animated comparison of the linearized and nonlinear robot models.",
+        },
+      ],
+    },
+  ],
+},
       { title: "Transmission Design Tool", slug: "transmission-design-tool", status: "Completed", summary: "A design tool created to evaluate and compare transmission configurations and performance." },
       {
   title: "Model B747 Wing Vibration Study",
