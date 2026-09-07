@@ -1,4 +1,7 @@
-const resumePath = "/resume/Joseph_Hall_Resume.pdf";
+import Image from "next/image";
+
+const resumePdfPath = "/resume/Joseph_Hall_Resume.pdf";
+const resumePreviewPath = "/resume/Joseph_Hall_Resume.png";
 
 export default function ResumePage() {
   return (
@@ -12,19 +15,31 @@ export default function ResumePage() {
       </h1>
 
       <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-        View my current resume below or download a PDF copy; last updated in the Fall of 2026.
+        View my current resume below or download a PDF copy; last updated
+        in the Fall of 2026.
       </p>
 
       <section className="mt-12 rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-4 md:p-8">
-        <iframe
-          src={`${resumePath}#view=FitH`}
-          title="Joey Hall Resume"
-          className="h-[75vh] min-h-[600px] w-full rounded-2xl border border-[var(--border)] bg-white"
-        />
+        <a
+          href={resumePdfPath}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Joseph Hall's resume as a PDF"
+          className="block overflow-hidden rounded-2xl border border-[var(--border)] bg-white"
+        >
+          <Image
+            src={resumePreviewPath}
+            alt="Joseph Hall mechanical engineering resume"
+            width={1700}
+            height={2200}
+            priority
+            className="h-auto w-full"
+          />
+        </a>
 
         <div className="mt-7 text-center">
           <a
-            href={resumePath}
+            href={resumePdfPath}
             download="Joseph_Hall_Resume.pdf"
             className="inline-flex rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-85"
           >
@@ -32,7 +47,7 @@ export default function ResumePage() {
           </a>
 
           <p className="mt-3 text-sm text-[var(--muted)]">
-            If the preview does not appear, use the download button to open the PDF.
+            Select the resume preview to open the full PDF.
           </p>
         </div>
       </section>
