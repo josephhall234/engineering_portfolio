@@ -1458,7 +1458,118 @@ export const projectCategories: ProjectCategory[] = [
     },
   ],
 },
-      { title: "Transmission Design Tool", slug: "transmission-design-tool", status: "Completed", summary: "A design tool created to evaluate and compare transmission configurations and performance." },
+      {
+  title: "Transmission Design Tool",
+  slug: "transmission-design-tool",
+  status: "Completed",
+
+  context: "Cal Poly Mechanical Systems Design",
+  date: "Spring 2026",
+  team: "Team of 3",
+
+  summary:
+    "Collaboratively developed an Excel-based transmission design tool that converts customer requirements into validated gear, shaft, and bearing selections.",
+
+  overview:
+    "Developed a comprehensive transmission design tool that automated more than 1,500 engineering calculations and accelerated the selection of gears, shafts, and bearings for customer-defined design requirements.",
+
+  role:
+    "Led the gear-design portion of the tool by researching and automating gear-sizing, strength, reliability, and life calculations. Also contributed to the broader Excel workflow, data lookup structure, conditional formatting, and final design challenge.",
+
+  heroImage: {
+    src: "/images/projects/Educational/Transmission Design Tool/hero_image.png",
+    alt: "Transmission design tool Excel workbook",
+    caption:
+      "Excel-based design tool used to evaluate transmission components against customer requirements.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "Over ten weeks, our three-person team developed an automated transmission design tool for the Final Design Challenge in Mechanical Systems Design. The tool received customer requirements including power, torque, output speed, working life, environmental conditions, and spatial constraints, then selected the most suitable gears, shafts, and bearings to satisfy those requirements.",
+      metrics: [
+        {
+          label: "Total calculations automated",
+          value: "1,538",
+        },
+        {
+          label: "Customer constraints considered",
+          value: "9",
+        },
+        {
+          label: "Development time",
+          value: "10 weeks",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Educational/Transmission Design Tool/figures.png",
+          alt: "Transmission design tool calculation figures",
+          caption:
+            "Automated calculations and design outputs generated from the customer requirements.",
+        },
+      ],
+    },
+
+    {
+      title: "Gear Design Automation",
+      body:
+        "My primary responsibility was developing the gear-design portion of the tool. I extensively studied Chapter 13 of Shigley's Mechanical Engineering Design to understand and automate the design considerations governing gear selection. The resulting workflow evaluated power transmission, output-speed requirements, reliability, working life in kilohours, and gear safety factors while automatically retrieving the necessary values from supporting data tables.",
+      metrics: [
+        {
+          label: "Gear calculations automated",
+          value: "172",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Educational/Transmission Design Tool/gears_screenshot.png",
+          alt: "Gear design calculations in the transmission design tool",
+          caption:
+            "Automated gear-design calculations and safety-factor checks.",
+        },
+      ],
+    },
+
+    {
+      title: "Shaft & Bearing Selection",
+      gallery: "featured",
+      body:
+        "The completed tool combined the gear calculations with automated shaft and bearing selection. Lookup tables and conditional formatting streamlined the design process by identifying unfavorable design elements and exposing low safety factors, allowing the team to quickly focus on configurations requiring further attention.",
+      images: [
+        {
+          src: "/images/projects/Educational/Transmission Design Tool/shafts_screenshot.png",
+          alt: "Shaft design calculations in the transmission design tool",
+          caption:
+            "Automated shaft-sizing calculations within the complete design workflow.",
+        },
+        {
+          src: "/images/projects/Educational/Transmission Design Tool/bearings_screenshot.png",
+          alt: "Bearing selection calculations in the transmission design tool",
+          caption:
+            "Bearing selection and life calculations based on the transmission loading conditions.",
+        },
+      ],
+    },
+
+    {
+      title: "Design Challenge & Reflection",
+      body:
+        "During the final design challenge, the tool enabled our team to complete the transmission-design process in 42 minutes out of the three hours allotted. Beyond strengthening my understanding of gear design, this project gave me substantial experience with Excel automation and reinforced the importance of defining a clear scope before breaking a large engineering problem into manageable, interconnected tasks.",
+      metrics: [
+        {
+          label: "Final challenge completion time",
+          value: "42 minutes",
+        },
+        {
+          label: "Time allotted",
+          value: "3 hours",
+        },
+      ],
+    },
+  ],
+},
       {
   title: "Model B747 Wing Vibration Study",
   slug: "b747-wing-vibration-study",
@@ -1568,7 +1679,6 @@ export const projectCategories: ProjectCategory[] = [
     },
   ],
 },
-      { title: "Satellite Bracket", slug: "satellite-bracket", status: "Completed", summary: "A structurally optimized bracket evaluated through CAD, hand calculations, FEA, and lifecycle costing." },
     ],
   },
   {
