@@ -2262,7 +2262,7 @@ export const projectCategories: ProjectCategory[] = [
   status: "In Progress",
 
   summary:
-    "An engineering proposal developed around an energy-related request for proposal from HDR. The project involves translating a defined customer need into technical requirements, a preliminary engineering approach, and a structured project plan.",
+    "Working with another student as part of a seven-person class and in collaboration with HDR to evaluate the siting and feasibility of a 50 MW energy installation. We are analyzing potential sites and technologies before developing three microgrid concepts with distinct strengths and tradeoffs. The project considers not only engineering feasibility, but also the social, political, and economic needs of a fictional Burning Man community governed by its ten principles.",
 
   heroImage: {
     src: "/images/projects/In progress/Energy-related RFP/hero_image.jpg",
