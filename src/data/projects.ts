@@ -2241,11 +2241,24 @@ export const projectCategories: ProjectCategory[] = [
     slug: "in-progress",
     description: "Current builds, experiments, and engineering ideas that are actively being developed.",
     projects: [
-      { title: "Casting Parts", slug: "casting-parts", status: "In Progress", summary: "An evolving collection of experimental metal castings produced using the personal furnace." },
-      { title: "Computer-Driven Etch A Sketch", slug: "computer-driven-etch-a-sketch", status: "In Progress", summary: "A computer-controlled drawing system combining mechanisms, motors, electronics, and software." },
       { title: "Senior Design Project", slug: "senior-design-project", status: "In Progress", summary: "A collaborative capstone project progressing from problem definition through prototyping and validation." },
       { title: "HDR Request for Proposal", slug: "hdr-request-for-proposal", status: "In Progress", summary: "An engineering proposal developed around a defined customer need, technical requirements, and project plan." },
-      { title: "Pelton Wheel Turbine", slug: "pelton-wheel-turbine", status: "In Progress", summary: "A small impulse turbine designed to operate using the flow and pressure available from a garden hose." },
+      {
+  title: "Pelton Wheel Turbine",
+  slug: "pelton-wheel-turbine",
+  status: "In Progress",
+
+  summary:
+    "A garden-hose-powered Pelton wheel turbine to be designed, manufactured, and tested for power output and efficiency.",
+
+  heroImage: {
+    src: "/images/projects/In progress/Pelton Wheel Turbine/hero_image.jpeg",
+    alt: "Pelton wheel power-generation system installed at a cabin",
+    caption:
+      "The cabin-based Pelton wheel system that inspired this project.",
+  },
+},
+      { title: "Casting Parts", slug: "casting-parts", status: "In Progress", summary: "An evolving collection of experimental metal castings produced using the personal furnace." },
     ],
   },
 ];
