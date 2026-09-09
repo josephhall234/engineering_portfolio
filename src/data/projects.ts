@@ -2257,12 +2257,12 @@ export const projectCategories: ProjectCategory[] = [
   },
 },
       {
-  title: "HDR Request for Proposal",
+  title: "ME4400: HDR Request for Proposal",
   slug: "hdr-request-for-proposal",
   status: "In Progress",
 
   summary:
-    "Working with another student as part of a seven-person class and in collaboration with HDR to evaluate the siting and feasibility of a 50 MW energy installation. We are analyzing potential sites and technologies before developing three microgrid concepts with distinct strengths and tradeoffs. The project considers not only engineering feasibility, but also the social, political, and economic needs of a fictional Burning Man community governed by its ten principles.",
+    "A special projects class in collaboration with HDR that tasks us to evaluate the siting and feasibility of a 50 MW energy installation. We are analyzing potential sites and technologies before developing three microgrid configurations with distinct strengths and tradeoffs. The project considers not only engineering feasibility, but also the social, political, and economic needs of a fictional Burning Man community. Working in pairs, our RFP will be presented at the end of the semester to upper management from HDR.",
 
   heroImage: {
     src: "/images/projects/In progress/Energy-related RFP/hero_image.jpg",

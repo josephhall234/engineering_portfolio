@@ -26,7 +26,6 @@ const education = [
       "Expected graduation: June 2027",
       "Overall GPA: 3.479",
       "Major GPA: 3.396",
-      "Selected Coursework: Energy Conversion, Special Problems for Advanced Undergraduates, Turbomachinery*, Wind Power Engineering*, Ocean Dynamics*",
     ],
     plannedNote: true,
     activities: [
