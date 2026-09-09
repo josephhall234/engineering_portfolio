@@ -712,7 +712,101 @@ export const projectCategories: ProjectCategory[] = [
     },
   ],
 },
-      { title: "Pepsi Canning Gear", slug: "pepsi-canning-gear", status: "Completed", summary: "A reverse-engineered replacement gear manufactured for a production canning system." },
+      {
+  title: "Pepsi Canning Gear",
+  slug: "pepsi-canning-gear",
+  status: "Completed",
+
+  context: "Gonsels Machine Shop",
+  date: "July 2024",
+  team: "Manufacturing Team",
+
+  summary:
+    "Reverse-engineered and manufactured an approximately 20-inch-diameter gear to resolve recurring capping issues on a high-production Pepsi canning line.",
+
+  overview:
+    "Collaborated with another technician to inspect and reconstruct a critical canning-line gear, then operated the CNC mill during production of its replacement.",
+
+  role:
+    "Helped measure the original gear using a coordinate measuring machine, reconstructed its arcs and splines in Mastercam, and served as the CNC machine operator while the replacement was manufactured.",
+
+  heroImage: {
+    src: "/images/projects/Professional/Pepsi Canning Gear/hero_image.jpg",
+    alt: "Large replacement gear manufactured for a Pepsi canning line",
+    caption:
+      "Approximately 20-inch-diameter replacement gear reverse-engineered and manufactured for a high-production Pepsi canning line.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "This project involved reverse engineering an approximately 20-inch-diameter gear used in a Pepsi canning facility. The original component was contributing to recurring capping issues on a line processing approximately 9,000 cans per hour. Because the facility reportedly lost approximately $10,000 for every hour the machine remained unavailable, the gear needed to be measured accurately and returned as quickly as possible.",
+    },
+
+    {
+      title: "CMM Inspection and CAD Reconstruction",
+      body:
+        "Working alongside another technician, I used a coordinate measuring machine to collect micrometer-scale measurements from the original gear. We worked under a strict time constraint because the facility needed the component returned to resume production. Using the collected measurements, I reconstructed the gear in Mastercam from its measured arcs, splines, and critical interface geometry.",
+      images: [
+        {
+          src: "/images/projects/Professional/Pepsi Canning Gear/simple_drawing_schematic.jpg",
+          alt: "Simplified dimensional schematic of the Pepsi canning gear",
+          caption:
+            "Simplified schematic documenting the primary geometry of the reverse-engineered gear.",
+        },
+      ],
+    },
+
+    {
+      title: "Manufacturing",
+      body:
+        "Once the reconstructed model was complete, the original gear was returned to the customer and the digital model was transferred to the shop manager for CNC programming. I then served as the machine operator during manufacturing, closely monitoring the mill and cutting operations for potential issues.",
+    },
+
+    {
+      title: "Installation and Results",
+      body:
+        "The completed replacement gear was delivered and installed successfully. After installation, the customer stated: \"Right on the money, little setup and haven't got a missing cap in the last 10,000+ bottles\".",
+      video: {
+        title: "Replacement Gear in Operation",
+        src: "/images/projects/Professional/Pepsi Canning Gear/gear_in_action.mp4",
+        caption:
+          "The replacement gear operating after installation in the Pepsi canning line.",
+      },
+    },
+
+    {
+      title: "Project Results",
+      body:
+        "The completed gear restored the required operation of the high-production canning line and performed successfully after installation. Accurate CMM inspection and CAD reconstruction allowed the original component to be returned promptly while the replacement was prepared for manufacturing.",
+      metrics: [
+        {
+          label: "Approximate gear diameter",
+          value: "20 in",
+        },
+        {
+          label: "Production rate",
+          value: "9,000 cans/hour",
+        },
+        {
+          label: "Reported downtime cost",
+          value: "~$10,000/hour",
+        },
+        {
+          label: "Units without a missing cap",
+          value: "10,000+",
+        },
+      ],
+    },
+
+    {
+      title: "Reflection",
+      body:
+        "This project strengthened my ability to work efficiently and accurately under significant time pressure. It also improved my proficiency with coordinate measuring machines and demonstrated the importance of carefully verifying reverse-engineered geometry when a customer's production schedule depends upon the replacement component.",
+    },
+  ],
+},
     ],
   },
   {
