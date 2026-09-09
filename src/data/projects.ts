@@ -591,7 +591,127 @@ export const projectCategories: ProjectCategory[] = [
     },
   ],
 },
-      { title: "Custom Semiconductor Vise", slug: "custom-semiconductor-vise", status: "Completed", summary: "A custom precision vise designed to securely and repeatably position semiconductor assemblies during manufacturing." },
+      {
+  title: "Custom Semiconductor Vise",
+  slug: "custom-semiconductor-vise",
+  status: "Completed",
+
+  context: "Sematool Precision Manufacturing",
+  date: "June 2025",
+  team: "Engineering Team",
+
+  summary:
+    "A custom 316 stainless-steel vise designed in two configurations to secure prototype semiconductor chips of different sizes during testing.",
+
+  overview:
+    "Designed and delivered a custom semiconductor-testing vise in two size-specific configurations, progressing from customer requirements through engineering approval, CNC programming, and manufacturing.",
+
+  role:
+    "Gathered the customer's dimensional, material, and physical requirements; developed and refined both vise configurations; produced manufacturing drawings; and coordinated design approval before CNC programming and production.",
+
+  heroImage: {
+    src: "/images/projects/Professional/Custom Semiconductor Vise/hero_image.jpg",
+    alt: "CAD model of the custom semiconductor vise",
+    caption:
+      "Custom 316 stainless-steel vise designed to secure prototype semiconductor chips during testing.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "This project involved designing a custom vise to securely locate prototype semiconductor chips during testing. The customer required two configurations to accommodate different chip sizes, with both versions manufactured from 316 stainless steel. During the initial meeting, I worked with the customer to establish the critical dimensions, material requirements, operating constraints, and delivery schedule.",
+    },
+
+    {
+      title: "Two-Configuration Design",
+      gallery: "featured",
+      body:
+        "Based on the customer's requirements, I developed two size-specific vise configurations using a shared design approach. Each version was tailored to the dimensions of its corresponding semiconductor chip while maintaining the positioning and retention features required for testing. The design was refined across two iterations based on internal and customer feedback.",
+      metrics: [
+        {
+          label: "Material",
+          value: "316 stainless steel",
+        },
+        {
+          label: "Size-specific configurations",
+          value: "2",
+        },
+        {
+          label: "Design iterations",
+          value: "2",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Professional/Custom Semiconductor Vise/config_1_cad.png",
+          alt: "CAD model of the first semiconductor vise configuration",
+          caption:
+            "First vise configuration developed for the smaller chip geometry.",
+        },
+        {
+          src: "/images/projects/Professional/Custom Semiconductor Vise/config_2_cad.png",
+          alt: "CAD model of the second semiconductor vise configuration",
+          caption:
+            "Second vise configuration developed for the alternate chip size.",
+        },
+      ],
+    },
+
+    {
+      title: "Engineering Review and Documentation",
+      gallery: "featured",
+      body:
+        "After completing the revisions, I presented both configurations for review by the engineering manager and customer. Once the designs were approved, I finalized the engineering drawings and released the components to the CNC programmer for toolpath development.",
+      images: [
+        {
+          src: "/images/projects/Professional/Custom Semiconductor Vise/config_1_engineering_drawing_blurred.jpg",
+          alt: "Engineering drawing for the first semiconductor vise configuration with confidential details obscured",
+          caption:
+            "Manufacturing drawing for the first configuration, with confidential dimensions and details obscured.",
+        },
+        {
+          src: "/images/projects/Professional/Custom Semiconductor Vise/config_2_engineering_drawing_blurred.jpg",
+          alt: "Engineering drawing for the second semiconductor vise configuration with confidential details obscured",
+          caption:
+            "Manufacturing drawing for the second configuration, with confidential dimensions and details obscured.",
+        },
+      ],
+    },
+
+    {
+      title: "Manufacturing and Delivery",
+      body:
+        "Following approval, both vise configurations were released for CNC programming and manufacturing. The completed components were delivered within the specified timeframe, and no post-delivery design issues or revision requests were reported by the customer.",
+    },
+
+    {
+      title: "Design Results",
+      body:
+        "The completed design provided the customer with two dedicated workholding configurations for testing different semiconductor chip sizes. Both versions satisfied the specified material, dimensional, and physical requirements and progressed through approval, CNC programming, manufacturing, and delivery without delaying the project schedule.",
+      metrics: [
+        {
+          label: "Material",
+          value: "316 stainless steel",
+        },
+        {
+          label: "Configurations delivered",
+          value: "2",
+        },
+        {
+          label: "Reported post-delivery issues",
+          value: "0",
+        },
+      ],
+    },
+
+    {
+      title: "Reflection",
+      body:
+        "As my first professional design project, this vise gave me practical exposure to the complete engineering workflow in a professional manufacturing environment. Although the design was relatively straightforward, it taught me how to translate customer needs into manufacturable components, obtain formal design approval, and work within the controlled documentation and review practices of an ISO 9001 quality-management system.",
+    },
+  ],
+},
       { title: "Pepsi Canning Gear", slug: "pepsi-canning-gear", status: "Completed", summary: "A reverse-engineered replacement gear manufactured for a production canning system." },
     ],
   },
