@@ -276,10 +276,179 @@ export const projectCategories: ProjectCategory[] = [
     },
   ],
 },
+      {
+  title: "O-Ring Installation Tool",
+  slug: "o-ring-installation-tool",
+  status: "Completed",
+
+  context: "BIW Connector Systems · ITT Inc.",
+  date: "Summer 2026",
+  team: "Product Design Engineering",
+
+  summary:
+    "A reverse-engineered O-ring installation tool redesigned for compatibility with a broader range of internal O-ring glands, enabling faster and less intrusive installation.",
+
+  overview:
+    "Reverse-engineered and redesigned a discontinued O-ring installation tool to improve its manufacturability, serviceability, and compatibility with a wider range of internal O-ring glands.",
+
+  role:
+    "Analyzed the existing tool, developed the replacement assembly in Creo Parametric, designed seven custom components, incorporated feedback from a formal engineering design review, coordinated prototype printing, and documented the project for continuation after my internship.",
+
+  heroImage: {
+    src: "/images/projects/Professional/O-ring Installation Tool/hero_image.png",
+    alt: "O-ring installation tool assembly",
+    caption:
+      "Reverse-engineered O-ring installation tool redesigned for greater compatibility, manufacturability, and serviceability.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "This project began near the end of my internship while several of my other designs were awaiting approval from the purchasing and manufacturing teams. The existing O-ring installation tool had been discontinued by its original supplier, creating the need for a reverse-engineered replacement. I evaluated how the original mechanism operated, identified limitations in its assembly and interchangeability, and developed a revised design for use with a wider range of internal O-ring glands.",
+      images: [
+        {
+          src: "/images/projects/Professional/O-ring Installation Tool/tool_assembly_real.jpeg",
+          alt: "Original O-ring installation tool before disassembly",
+          caption:
+            "The original discontinued O-ring installation tool used as the basis for the reverse-engineered design.",
+        },
+      ],
+    },
+
+    {
+      title: "Reverse Engineering",
+      gallery: "featured",
+      body:
+        "I disassembled the existing tool to understand the function of each component and determine which features should be retained or improved. Particular attention was given to the spring-loaded mechanism, threaded connections, and methods used to retain the internal components. This analysis established the functional requirements and key dimensions for the replacement design.",
+      images: [
+        {
+          src: "/images/projects/Professional/O-ring Installation Tool/tool_deconstructed_real.jpeg",
+          alt: "Original O-ring installation tool separated into its individual components",
+          caption:
+            "The original tool was disassembled to evaluate its components, connections, and operating mechanism.",
+        },
+        {
+          src: "/images/projects/Professional/O-ring Installation Tool/tool_spring_real.jpeg",
+          alt: "Spring-loaded mechanism from the original O-ring installation tool",
+          caption:
+            "Detail of the original spring-loaded mechanism examined during reverse engineering.",
+        },
+      ],
+    },
+
+    {
+      title: "Initial CAD Design",
+      body:
+        "I modeled the initial design in Creo Parametric as an 11-component assembly. Four components, including the spring and set screws, were selected from outside suppliers, while the remaining seven components were designed from scratch. The models incorporated fully defined threads, knurling, and the internal geometry required to guide the O-ring during installation.",
+      metrics: [
+        {
+          label: "Total components",
+          value: "11",
+        },
+        {
+          label: "Custom-designed components",
+          value: "7",
+        },
+        {
+          label: "Sourced components",
+          value: "4",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Professional/O-ring Installation Tool/cad_assembly.png",
+          alt: "Creo CAD model of the redesigned O-ring installation tool",
+          caption:
+            "Complete CAD assembly of the initial reverse-engineered design.",
+        },
+        {
+          src: "/images/projects/Professional/O-ring Installation Tool/cross_section_cad.png",
+          alt: "Cross-sectional CAD view of the O-ring installation tool",
+          caption:
+            "Cross-sectional view showing the internal components and operating mechanism.",
+        },
+      ],
+    },
+
+    {
+      title: "Manufacturability and Serviceability",
+      body:
+        "The original brass insert and threaded connector were locked together by drilling and tapping directly across their material interface. This made the assembly difficult to disassemble and prevented the inserts from being readily interchanged. In the revised design, I milled a flat into the threaded insert and located the retaining set screw from the side. The set screw remained below the minor diameter of the mating thread, preventing interference during assembly. I also standardized the primary connections to 7/8-16 UNF threads in place of the original custom thread and replaced a permanent pinned connection with another removable set-screw connection.",
+    },
+
+    {
+      title: "Design Review and Revision",
+      gallery: "featured",
+      body:
+        "After completing the initial design, I led a review with the product design engineering team to present the assembly, proposed manufacturing approach, and anticipated timeline. The primary discussion centered on whether friction from the set screws would provide sufficient retention. Based on the team's feedback, I revised the connection to use a cone-point set screw engaging a circumferential groove in the mating insert. This created a positive mechanical lock while preserving the interchangeability and ease of disassembly provided by the original revision.",
+      images: [
+        {
+          src: "/images/projects/Professional/O-ring Installation Tool/design_review_slide.png",
+          alt: "Engineering design review slide for the O-ring installation tool",
+          caption:
+            "Design-review material used to present the initial design, manufacturing plan, and project timeline.",
+        },
+        {
+          src: "/images/projects/Professional/O-ring Installation Tool/set_screw_revision.png",
+          alt: "Revised cone-point set-screw retention mechanism",
+          caption:
+            "Revised connection using a cone-point set screw and machined groove to provide positive mechanical retention.",
+        },
+      ],
+    },
+
+    {
+      title: "Prototype and Project Handoff",
+      gallery: "featured",
+      body:
+        "After incorporating the design-review feedback, I released the custom components for 3D printing to evaluate their fit and assembly. Because my internship ended shortly afterward, I prepared a detailed handoff report documenting the design decisions, calculations, supplier part numbers, manufacturing requirements, and remaining work. This allowed the next engineer to continue the project without repeating the reverse-engineering and development work.",
+      images: [
+        {
+          src: "/images/projects/Professional/O-ring Installation Tool/3d_printed_components.jpeg",
+          alt: "Individual 3D-printed O-ring installation tool components",
+          caption:
+            "Custom components produced by 3D printing for the initial physical prototype.",
+        },
+        {
+          src: "/images/projects/Professional/O-ring Installation Tool/3d_printed_assembly.jpeg",
+          alt: "Assembled 3D-printed prototype of the O-ring installation tool",
+          caption:
+            "Assembled prototype used to evaluate component fit and the overall design.",
+        },
+      ],
+    },
+
+    {
+      title: "Design Outcome",
+      body:
+        "The project produced a fully modeled and physically prototyped replacement for the discontinued installation tool. The revised design replaced difficult-to-service connections, standardized the primary threads, and introduced interchangeable components intended to support a wider range of internal O-ring glands. Although my internship ended before the design could be manufactured and tested in its final material, the completed prototype and engineering handoff established a clear path for the next phase of development.",
+      metrics: [
+        {
+          label: "Total components",
+          value: "11",
+        },
+        {
+          label: "Custom-designed components",
+          value: "7",
+        },
+        {
+          label: "Standard thread",
+          value: "7/8-16 UNF",
+        },
+      ],
+    },
+
+    {
+      title: "Reflection",
+      body:
+        "I particularly enjoyed this project because it allowed me to apply reverse-engineering skills to a practical manufacturing problem. It also significantly improved my proficiency in Creo Parametric, especially when modeling functional threads, knurling, and unusual internal geometries. Leading the design review and preparing the final handoff documentation reinforced the importance of communicating design intent clearly, particularly when a project must be continued by another engineer.",
+    },
+  ],
+},
       { title: "Injection Mold Plates", slug: "injection-mold-plates", status: "Completed", summary: "Precision mold-plate design developed around customer requirements, machine constraints, and manufacturability." },
       { title: "Custom Semiconductor Vise", slug: "custom-semiconductor-vise", status: "Completed", summary: "A custom precision vise designed to securely and repeatably position semiconductor assemblies during manufacturing." },
       { title: "Pepsi Canning Gear", slug: "pepsi-canning-gear", status: "Completed", summary: "A reverse-engineered replacement gear manufactured for a production canning system." },
-      { title: "Cable Separator", slug: "cable-separator", status: "Completed", summary: "A manufactured component developed to organize and separate cable assemblies within a constrained system." },
     ],
   },
   {
