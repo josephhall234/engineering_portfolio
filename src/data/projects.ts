@@ -2249,7 +2249,7 @@ export const projectCategories: ProjectCategory[] = [
   status: "In Progress",
 
   summary:
-    "A garden-hose-powered Pelton wheel turbine to be designed, manufactured, and tested for power output and efficiency.",
+    "A garden-hose-powered Pelton wheel turbine to be designed, manufactured, and tested for power output and efficiency. The image shown is the micro-grid system at a friend's cabin, and serves as the insipration for the whole project.",
 
   heroImage: {
     src: "/images/projects/In progress/Pelton Wheel Turbine/hero_image.jpeg",
