@@ -27,6 +27,7 @@ const education = [
       "Overall GPA: 3.479",
       "Major GPA: 3.396",
     ],
+    plannedNote: false,
     activities: [
       {
         title: "Cal Poly Wind Power",
