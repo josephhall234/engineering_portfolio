@@ -60,7 +60,7 @@ export const projectCategories: ProjectCategory[] = [
   slug: "metal-lok-ultra-lite",
   status: "In Progress",
 
-  context: "BIW",
+  context: "BIW Connector Systems",
   date: "Summer 2026",
   team: "Product Design Engineering Team",
 
@@ -281,7 +281,7 @@ export const projectCategories: ProjectCategory[] = [
   slug: "o-ring-installation-tool",
   status: "Completed",
 
-  context: "BIW Connector Systems · ITT Inc.",
+  context: "BIW Connector Systems",
   date: "Summer 2026",
   team: "Product Design Engineering",
 
