@@ -54,12 +54,14 @@ export function ProjectCard({
           {project.summary}
         </p>
 
-        <Link
-          href={`/projects/${categorySlug}/${project.slug}`}
-          className="mt-7 inline-flex rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
-        >
-          See details →
-        </Link>
+        {project.status !== "In Progress" && (
+          <Link
+            href={`/projects/${categorySlug}/${project.slug}`}
+            className="mt-7 inline-flex rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+          >
+            See details →
+          </Link>
+        )}
       </div>
     </article>
   );
