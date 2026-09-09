@@ -57,7 +57,7 @@ export function ProjectCard({
         {categorySlug !== "in-progress" && (
           <Link
             href={`/projects/${categorySlug}/${project.slug}`}
-            className="mt-7 inline-flex rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+            className="mt-7 inline-flex rounded-full bg-[color-mix(in_srgb,var(--accent)_88%,white)] px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
           >
             See details →
           </Link>
