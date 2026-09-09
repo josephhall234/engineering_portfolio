@@ -2241,8 +2241,36 @@ export const projectCategories: ProjectCategory[] = [
     slug: "in-progress",
     description: "Current builds, experiments, and engineering ideas that are actively being developed.",
     projects: [
-      { title: "Senior Design Project", slug: "senior-design-project", status: "In Progress", summary: "A collaborative capstone project progressing from problem definition through prototyping and validation." },
-      { title: "HDR Request for Proposal", slug: "hdr-request-for-proposal", status: "In Progress", summary: "An engineering proposal developed around a defined customer need, technical requirements, and project plan." },
+      {
+  title: "Senior Design Project",
+  slug: "senior-design-project",
+  status: "In Progress",
+
+  summary:
+    "A yearlong capstone project completed by a team of four students alongside a corporate sponsor. We are designing, testing, and validating a patent-pending geothermal screw heat exchanger that replaces the condenser in a traditional HVAC system by exchanging heat with the ground. If successful, the system could offer homeowners a less expensive and more accessible alternative to conventional geothermal ground loops.",
+
+  heroImage: {
+    src: "/images/projects/In progress/Senior Design Project/hero_image.png",
+    alt: "Geothermal screw heat exchanger senior design project",
+    caption:
+      "Patent-pending geothermal screw heat exchanger being developed and validated by the senior design team.",
+  },
+},
+      {
+  title: "HDR Request for Proposal",
+  slug: "hdr-request-for-proposal",
+  status: "In Progress",
+
+  summary:
+    "An engineering proposal developed around an energy-related request for proposal from HDR. The project involves translating a defined customer need into technical requirements, a preliminary engineering approach, and a structured project plan.",
+
+  heroImage: {
+    src: "/images/projects/In progress/Energy-related RFP/hero_image.jpg",
+    alt: "Energy-related engineering request for proposal project",
+    caption:
+      "Preliminary development of an engineering response to an energy-related request for proposal.",
+  },
+},
       {
   title: "Pelton Wheel Turbine",
   slug: "pelton-wheel-turbine",
@@ -2258,7 +2286,21 @@ export const projectCategories: ProjectCategory[] = [
       "The cabin-based Pelton wheel system that inspired this project.",
   },
 },
-      { title: "Casting Parts", slug: "casting-parts", status: "In Progress", summary: "An evolving collection of experimental metal castings produced using the personal furnace." },
+      {
+  title: "Miscellaneous Metal Castings",
+  slug: "miscellaneous-metal-castings",
+  status: "In Progress",
+
+  summary:
+    "An ongoing collection of metal parts that I plan to produce using my recently completed casting furnace. These experiments will allow me to explore new patterns, mold geometries, and casting techniques while continuing to improve the furnace and my overall casting process.",
+
+  heroImage: {
+    src: "/images/projects/In progress/Miscellaneous Metal Castings/hero_image.jpg",
+    alt: "Metal casting furnace prepared for future casting projects",
+    caption:
+      "My recently completed metal casting furnace, which will be used to produce a variety of experimental parts.",
+  },
+},
     ],
   },
 ];
