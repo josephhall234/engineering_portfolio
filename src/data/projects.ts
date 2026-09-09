@@ -446,7 +446,151 @@ export const projectCategories: ProjectCategory[] = [
     },
   ],
 },
-      { title: "Injection Mold Plates", slug: "injection-mold-plates", status: "Completed", summary: "Precision mold-plate design developed around customer requirements, machine constraints, and manufacturability." },
+      {
+  title: "Injection Mold Plates",
+  slug: "injection-mold-plates",
+  status: "Completed",
+
+  context: "Sematool Precision Manufacturing",
+  date: "June–August 2025",
+  team: "Engineering Team",
+
+  summary:
+    "Prototype overmold plates designed for a low-pressure injection-molding system to enclose and protect sensitive electronic components.",
+
+  overview:
+    "Designed and refined a pair of prototype injection mold plates through multiple rounds of customer feedback, then simplified the final geometry to reduce estimated machining time by 24% while maintaining the original delivery schedule.",
+
+  role:
+    "Established the project requirements with the customer, developed four design iterations, selected workholding and datum strategies, produced engineering drawings, coordinated CNC cost estimation, and revised the plates for more efficient manufacturing.",
+
+  heroImage: {
+    src: "/images/projects/Professional/Injection Mold Plates/hero_image.png",
+    alt: "CAD model of the injection mold plate assembly",
+    caption:
+      "Prototype mold plates designed for low-pressure overmolding of sensitive electronic components.",
+  },
+
+  sections: [
+    {
+      title: "Project Overview",
+      body:
+        "This two-month project involved designing a pair of prototype mold plates for a low-pressure injection-molding system used to overmold and protect sensitive electronic components. During the initial customer meeting, we established the project scope, budget, technical requirements, and delivery schedule. The customer then supplied a CAD model of the assembly to be encapsulated along with the molding material, machine dimensions, and available clamping force.",
+    },
+
+    {
+      title: "Initial Mold Design",
+      body:
+        "Using the supplied assembly model and machine specifications, I developed the initial mold geometry around the required overmold profile. The design accounted for component positioning, mold alignment, material flow, part removal, and compatibility with the customer's molding equipment. I also established the workholding and datum strategy required to machine and inspect both plates consistently.",
+      metrics: [
+        {
+          label: "Single-shot overmold mass",
+          value: "35 g",
+        },
+        {
+          label: "Available clamping force",
+          value: "10 tons",
+        },
+      ],
+      images: [
+        {
+          src: "/images/projects/Professional/Injection Mold Plates/bottom_cad.png",
+          alt: "CAD model of the bottom injection mold plate",
+          caption:
+            "CAD model of the bottom mold plate developed around the required overmold geometry.",
+        },
+      ],
+    },
+
+    {
+      title: "Customer-Driven Iteration",
+      gallery: "featured",
+      body:
+        "I presented the initial design to the customer and reviewed the proposed geometry, workholding approach, and datum selections. The customer requested several changes that expanded upon the original scope, requiring additional design development while preserving the established budget and delivery schedule. After two further detailed-design iterations and continued communication, the customer approved the mold configuration for manufacturing review.",
+      images: [
+        {
+          src: "/images/projects/Professional/Injection Mold Plates/engineering_drawing_top_blurred.jpg",
+          alt: "Engineering drawing for the top injection mold plate with confidential details obscured",
+          caption:
+            "Engineering drawing for the top mold plate, with confidential dimensions and details obscured.",
+        },
+        {
+          src: "/images/projects/Professional/Injection Mold Plates/engineering_drawing_bottom_blurred.jpg",
+          alt: "Engineering drawing for the bottom injection mold plate with confidential details obscured",
+          caption:
+            "Engineering drawing for the bottom mold plate, with confidential dimensions and details obscured.",
+        },
+      ],
+    },
+
+    {
+      title: "Design for Manufacturing",
+      body:
+        "After customer approval, I submitted the plates to the CNC programmer for cost and machining-time estimates. The initial manufacturing review indicated that the geometry would require excessive machining time. I revisited the models and removed unnecessary fillets, chamfers, and other features that added toolpaths without improving the mold's function. These changes reduced the estimated machining time by 24% while preserving the required overmold geometry and interfaces.",
+      metrics: [
+        {
+          label: "Machining-time reduction",
+          value: "24%",
+        },
+        {
+          label: "Detailed design iterations",
+          value: "4",
+        },
+      ],
+    },
+
+    {
+      title: "Manufacturing and Delivery",
+      gallery: "featured",
+      body:
+        "The customer approved the manufacturing revisions, after which the final plates were released for machining. Both components were manufactured and delivered within the deadline established in the original project scope.",
+      images: [
+        {
+          src: "/images/projects/Professional/Injection Mold Plates/real_photo_top.jpg",
+          alt: "Completed top injection mold plate after manufacturing",
+          caption:
+            "Completed top mold plate following CNC machining and inspection.",
+        },
+        {
+          src: "/images/projects/Professional/Injection Mold Plates/real_photo_bottom.jpg",
+          alt: "Completed bottom injection mold plate after manufacturing",
+          caption:
+            "Completed bottom mold plate delivered for prototype overmolding.",
+        },
+      ],
+    },
+
+    {
+      title: "Design Results",
+      body:
+        "The final design satisfied the customer's equipment, overmold, and delivery requirements while incorporating feedback from both the customer and manufacturing team. Simplifying the fourth iteration produced a more economical design and reduced the estimated machining time by 24% without compromising the required functionality.",
+      metrics: [
+        {
+          label: "Single-shot overmold mass",
+          value: "35 g",
+        },
+        {
+          label: "Available clamping force",
+          value: "10 tons",
+        },
+        {
+          label: "Machining-time reduction",
+          value: "24%",
+        },
+        {
+          label: "Detailed design iterations",
+          value: "4",
+        },
+      ],
+    },
+
+    {
+      title: "Reflection",
+      body:
+        "This project reinforced the importance of maintaining regular communication with both the customer and manufacturing team throughout the design process. Frequent customer reviews helped ensure that the evolving design continued to meet the application requirements, while early manufacturing feedback revealed opportunities to simplify the geometry substantially. The experience strengthened my understanding that an effective design must be functional, manufacturable, and responsive to the customer's needs.",
+    },
+  ],
+},
       { title: "Custom Semiconductor Vise", slug: "custom-semiconductor-vise", status: "Completed", summary: "A custom precision vise designed to securely and repeatably position semiconductor assemblies during manufacturing." },
       { title: "Pepsi Canning Gear", slug: "pepsi-canning-gear", status: "Completed", summary: "A reverse-engineered replacement gear manufactured for a production canning system." },
     ],
