@@ -200,7 +200,7 @@ export const projectCategories: ProjectCategory[] = [
           src: "/images/projects/Professional/Metal Lok Ultra Lite/lower_connector_cad.png",
           alt: "CAD model of a redesigned lower connector component",
           caption:
-            "Updated connector geometry incorporating the revised high-pressure sealing requirements.",
+            "Cross sectional view of updated connector geometry, blurred to protect confidentiality.",
         },
       ],
     },

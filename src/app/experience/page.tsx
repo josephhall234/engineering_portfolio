@@ -23,7 +23,7 @@ const education = [
     subtitle: "B.S. in Mechanical Engineering, Energy Resources Concentration",
     location: "San Luis Obispo, California",
     bullets: [
-      "Expected graduation: June 2027",
+      "Expected graduation: May 2027",
       "Overall GPA: 3.479",
       "Major GPA: 3.396",
     ],
