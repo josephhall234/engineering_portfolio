@@ -8,7 +8,7 @@ export default function Home() {
       <section className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[0.95fr_1.05fr] md:items-center md:px-12 md:py-20 lg:px-0">
         <div>
           <p className="mb-4 text-sm uppercase tracking-[0.25em] text-[var(--accent)]">
-            Mechanical Engineer
+            Mechanical Engineer EIT
           </p>
 
           <h1 className="max-w-2xl text-4xl font-semibold leading-tight sm:text-5xl md:text-[3.4rem]">
